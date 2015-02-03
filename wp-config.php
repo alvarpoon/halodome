@@ -15,26 +15,30 @@
  */
 
 // ** MySQL settings - You can get this info from your web host ** //
-/** The name of the database for WordPress */
-define('DB_NAME', 'halodome');
+switch ($_SERVER['SERVER_NAME']) {
 
-/** MySQL database username */
-define('DB_USER', 'root');
+  case "local.halodome.com":
+    define( 'DB_NAME',     'halodome' );
+    define( 'WP_SITEURL',  'http://local.halodome.com' );
+    define( 'WP_HOME', 'http://local.halodome.com' );
+    define( 'DB_USER',     'root' );
+    define( 'DB_PASSWORD', 'root' );
+    define( 'DB_HOST',     'localhost' );
 
-/** MySQL database password */
-define('DB_PASSWORD', 'root');
-
-/** MySQL hostname */
-define('DB_HOST', 'localhost');
+  case "halodome.nowwhat.hk":
+    define( 'DB_NAME',     'nowwhat_halodome' );
+    define( 'WP_SITEURL',  'http://halodome.nowwhat.hk' );
+    define( 'WP_HOME', 'http://halodome.nowwhat.hk' );
+    define( 'DB_USER',     'nowwhat' ); // replace with live server settings
+    define( 'DB_PASSWORD', '20273214' );
+    define( 'DB_HOST',     'localhost' );
+}
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');
 
 /** The Database Collate type. Don't change this if in doubt. */
 define('DB_COLLATE', '');
-
-define('WP_HOME','http://local.halodome.com/');
-define('WP_SITEURL','http://local.halodome.com/');
 
 /**#@+
  * Authentication Unique Keys and Salts.
