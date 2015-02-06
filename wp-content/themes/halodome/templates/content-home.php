@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!--<section style="background-image: url(<?=get_stylesheet_directory_uri()?>/assets/img/main-img-1.jpg);" class="cd-fixed-bg slide cd-bg-1 ss-active"> 
   <div>
     <h1>HALODOME</h1>
@@ -10,9 +9,6 @@
 </section>-->
 <section class="">
   <img src="<?=get_stylesheet_directory_uri()?>/assets/img/main-img-1.jpg" class="bg" />
-=======
-<section style="background-image: url(<?=get_stylesheet_directory_uri()?>/assets/img/main-img-1.jpg);" class="cd-fixed-bg slide cd-bg-1 ss-active"> 
->>>>>>> e8174441c30fc6192272774ae3d9e950544782bf
   <div>
     <h1>HALODOME</h1>
     <h3>Spectacular Space</h3>
