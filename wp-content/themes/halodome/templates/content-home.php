@@ -12,17 +12,17 @@
     <p>Domes are ancient, from igloos to The Pantheon the experience inside them is visceral and wonderful with a e nveloping sense of calm created by the arching walls that become roof and then walls again in a single sweep.</p>
   </div>
 </section>
-<section style="background-image: url(<?=get_stylesheet_directory_uri()?>/assets/img/main-img-3.jpg);" class="cd-fixed-bg slide cd-bg-1 ss-active"> 
+<section style="background-image: url(<?=get_stylesheet_directory_uri()?>/assets/img/main-img-3.jpg); height:511px; min-height:auto;" class="cd-fixed-bg slide cd-bg-1 ss-active"> 
   <div class="image-caption">
     <p>Built to German Passivehaus specification, the highest standard in the world for energy consumption, the concept uses seventy fully prefabricated and sustainably sourced timber panels bolted together to form a single dome space 13 meters x 6.5 meters high.</p>
   </div>
 </section>
-<section  style="background-image: url(<?=get_stylesheet_directory_uri()?>/assets/img/main-img-4.jpg);" class="cd-fixed-bg slide cd-bg-1 ss-active" id="halodome-numbers">
+<section  style="background-image: url(<?=get_stylesheet_directory_uri()?>/assets/img/main-img-4.jpg); height:511px; min-height:auto;" class="cd-fixed-bg slide cd-bg-1 ss-active" id="halodome-numbers">
 	<h2>Numbers in Halodome</h2>
 	<div class="">
 	</div>
 </section>
-<section style="background-image: url(<?=get_stylesheet_directory_uri()?>/assets/img/main-img-5.jpg);" class="cd-fixed-bg slide cd-bg-1 ss-active"> 
+<section style="background-image: url(<?=get_stylesheet_directory_uri()?>/assets/img/main-img-5.jpg); height:511px; min-height:auto;" class="cd-fixed-bg slide cd-bg-1 ss-active"> 
   <div class="image-caption">
     <p>The space is completely flexible an can be offered, as in the example shown as a 160m<sup>2</sup> of usable space on two levels with a half size mezzanine floor and central spiral staircase.</p>
   </div>
