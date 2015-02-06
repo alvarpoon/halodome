@@ -1,8 +1,18 @@
+.body{padding:0; margin:0;}
+*{
+	box-sizing:border-box;
+}
+
 // Content wrapper
 .wrap { }
 
 // Main content area
 .main {
+  padding:0!important;
+  margin:0!important;
+  float:none;
+  height:100%!important;
+  min-height:100%!important;
   .make-sm-column(@main-sm-columns);
   .sidebar-primary & {
     .make-sm-column(@main-sm-columns - @sidebar-sm-columns);

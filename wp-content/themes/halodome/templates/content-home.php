@@ -1,4 +1,16 @@
-<section class="full-width-image">
+<!--<div id="home" class="cd-main-content">-->
+    <section style="background-image: url(<?=get_stylesheet_directory_uri()?>/assets/img/main-img-1.jpg);" class="cd-fixed-bg slide cd-bg-1 ss-active"> 
+      <div>
+        <h1>HALODOME</h1>
+        <h3>Spectacular Space</h3>
+      </div>
+      <div class="image-caption">
+        <p>HALODOME is a prefabricated multi-use timber structure conceived by Tim Oulton, founder of the Halo group, for potential export to anywhere in the world, "a house, a workshop, a studio, a showroom, what ever you want…” as Tim says.</p>
+      </div>
+    </section>
+<!--</div>
+-->
+<!--<section class="full-width-image">
 	<img class="img-responsive" src="<?=get_stylesheet_directory_uri()?>/assets/img/main-img-1.jpg" alt="" />
 	<div>
 		<h1>HALODOME</h1>
@@ -7,7 +19,7 @@
 	<div class="image-caption">
 		<p>HALODOME is a prefabricated multi-use timber structure conceived by Tim Oulton, founder of the Halo group, for potential export to anywhere in the world, "a house, a workshop, a studio, a showroom, what ever you want…” as Tim says.</p>
 	</div>
-</section>
+</section>-->
 <section class="full-width-image">
 	<img class="img-responsive" src="<?=get_stylesheet_directory_uri()?>/assets/img/main-img-2.jpg" alt="" />
 	<div class="image-caption">
