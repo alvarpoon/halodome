@@ -1,6 +1,12 @@
+//===============================================================================
+//===============================================================================
+// mobile
+//===============================================================================
+//===============================================================================
+
 .body{padding:0; margin:0;}
 *{
-	box-sizing:border-box;
+	box-sizing:border-box; 
 }
 
 // Content wrapper
@@ -19,17 +25,113 @@
   }
 }
 
+.full-width-container{
+	position:relative;
+	text-align:center;
+	.overlayContent{
+		position:absolute;
+		z-index:999;
+		color:#fff;
+		top:0;
+		width:100%;
+		height:auto;
+		min-height:100%;
+	}
+	.image-caption{
+		background:url(../img/bg_alpha.png) repeat;
+		padding:10px 25%;
+		position: absolute;
+		bottom:0;
+		width:100%;
+	}
+}
+
+.half-height{
+	max-height:511px;
+	img.bg{
+		max-height:511px;
+		height:auto;
+	}
+}
+
 img.bg {
   /* Set rules to fill background */
   min-height: 100%;
-  /*min-width: 1024px;*/
 	
   /* Set up proportionate scaling */
   width: 100%;
   height: auto;
-	
-  /* Set up positioning */
-  /*position: fixed;
-  top: 0;
-  left: 0;*/
+}
+
+//===============================================================================
+//===============================================================================
+// tablet
+//===============================================================================
+//===============================================================================
+@media (min-width: @screen-sm-min) {
+
+}
+
+//===============================================================================
+//===============================================================================
+// desktop
+//===============================================================================
+//===============================================================================
+@media (min-width: @screen-md-min) {
+	.full-width-container{
+		position:relative;
+		text-align:center;
+		.overlayContent{
+			position:absolute;
+			z-index:999;
+			color:#fff;
+			top:0;
+			width:100%;
+			height:auto;
+			min-height:100%;
+		}
+		.image-caption{
+			background:url(../img/bg_alpha.png) repeat;
+			padding:10px 25%;
+			position: absolute;
+			bottom:0;
+			width:100%;
+		}
+		.rightContent{
+			width:35%;
+			position:absolute;
+			z-index:999;
+			color:#fff;
+			top:0;
+			height:100%!important;
+			right:0!important;
+			.image-caption{
+				height:100%;
+				right:0;
+				padding: 20% 10% 0 10%;
+			}
+		}
+		.leftContent{
+			width:35%;
+			position:absolute;
+			z-index:999;
+			color:#fff;
+			top:0;
+			height:100%!important;
+			left:0;
+			.image-caption{
+				height:100%;
+				left:0;
+				padding: 20% 10% 0 10%;
+			}
+		}
+	}
+}
+
+//===============================================================================
+//===============================================================================
+// wide desktop
+//===============================================================================
+//===============================================================================
+@media (min-width: @screen-lg-min) {
 }
