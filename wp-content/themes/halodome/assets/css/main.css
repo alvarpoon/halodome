@@ -6460,6 +6460,7 @@ button.close {
 html,
 body {
   height: 100%;
+  font-family: 'Open Sans', sans-serif;
 }
 .comment-list ol {
   list-style: none;
@@ -6530,29 +6531,48 @@ figure.alignnone {
 .full-width-container {
   position: relative;
   text-align: center;
+  font-size: 15px;
 }
 .full-width-container .overlayContent {
-  position: absolute;
+  position: relative;
   z-index: 999;
   color: #fff;
-  top: 0;
   width: 100%;
-  height: auto;
-  min-height: 100%;
 }
 .full-width-container .image-caption {
   background: url(../img/bg_alpha.png) repeat;
-  padding: 10px 25%;
-  position: absolute;
-  bottom: 0;
+  padding: 10px 15%;
+  position: relative;
   width: 100%;
 }
-.half-height {
-  max-height: 511px;
+.full-width-container .leftContent,
+.full-width-container .rightContent {
+  color: #fff;
+  position: relative;
 }
-.half-height img.bg {
-  max-height: 511px;
-  height: auto;
+.full-width-container .numberDataContainer {
+  position: relative;
+  padding: 10% 0;
+}
+.full-width-container .numberDataContainer .numberData {
+  width: 100%;
+  text-align: center;
+  margin: 4% 0;
+}
+.full-width-container .numberDataContainer .numberData span {
+  display: block;
+  font-size: 20vw;
+}
+.full-width-container .numberDataContainer .numberData sup {
+  font-size: 10vw;
+}
+.full-width-container h2 {
+  margin: 0 auto 0 auto;
+  padding: 10px 0;
+  font-size: 6vw;
+  border: 1px solid #fff;
+  width: 80%;
+  text-align: center;
 }
 img.bg {
   /* Set rules to fill background */
@@ -6561,10 +6581,45 @@ img.bg {
   width: 100%;
   height: auto;
 }
-@media (min-width: 992px) {
+#halodome-floorplan {
+  text-align: center;
+}
+#halodome-floorplan h2 {
+  border: 1px solid #000;
+  width: 80%;
+  margin: 5% auto 2% auto;
+  font-size: 6vw;
+}
+#halodome-floorplan img {
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .half-height {
+    max-height: 511px;
+  }
+  .half-height img.bg {
+    max-height: 511px;
+    height: auto;
+  }
   .full-width-container {
     position: relative;
     text-align: center;
+  }
+  .full-width-container .pageHeading {
+    border: 1px solid #fff;
+    margin: 16% auto 0;
+    min-width: auto;
+    width: 40%;
+    letter-spacing: 3px;
+    padding: 20px 0;
+    text-transform: uppercase;
+  }
+  .full-width-container .pageHeading h1 {
+    margin: 0;
+  }
+  .full-width-container .pageHeading h3 {
+    font-size: 20px;
+    margin: 10px 0 0 0;
   }
   .full-width-container .overlayContent {
     position: absolute;
@@ -6577,7 +6632,7 @@ img.bg {
   }
   .full-width-container .image-caption {
     background: url(../img/bg_alpha.png) repeat;
-    padding: 10px 25%;
+    padding: 10px 13%;
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -6594,7 +6649,7 @@ img.bg {
   .full-width-container .rightContent .image-caption {
     height: 100%;
     right: 0;
-    padding: 20% 10% 0 10%;
+    padding: 20% 11% 0 11%;
   }
   .full-width-container .leftContent {
     width: 35%;
@@ -6608,7 +6663,67 @@ img.bg {
   .full-width-container .leftContent .image-caption {
     height: 100%;
     left: 0;
-    padding: 20% 10% 0 10%;
+    padding: 20% 11% 0 11%;
+  }
+  .full-width-container .numberDataContainer {
+    height: 100%;
+    position: absolute;
+    padding: 4% 4%;
+    font-size: 1.7vw;
+  }
+  .full-width-container .numberDataContainer .numberData {
+    float: left;
+    width: 24%;
+    text-align: center;
+    margin-top: 4%;
+  }
+  .full-width-container .numberDataContainer .numberData span {
+    display: block;
+    font-size: 8vw;
+  }
+  .full-width-container .numberDataContainer .numberData sup {
+    font-size: 5vw;
+  }
+  .full-width-container h2 {
+    border: 1px solid #fff;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin: 0 auto;
+    padding: 15px;
+    text-transform: uppercase;
+    width: 50%;
+    font-size: 2.7vw;
+  }
+  #halodome-floorplan h2 {
+    width: 36%;
+    margin: 5% auto 2% auto;
+    font-size: 1.9vw;
+  }
+}
+@media (min-width: 992px) {
+  .full-width-container .pageHeading {
+    width: 30%;
+  }
+  .full-width-container .pageHeading h3 {
+    font-size: 20px;
+    margin: 10px 0 0 0;
+  }
+  .full-width-container .numberDataContainer {
+    padding: 8% 6%;
+    font-size: 1.2vw;
+  }
+  .full-width-container .numberDataContainer .numberData {
+    margin-top: 4%;
+  }
+  .full-width-container .numberDataContainer .numberData span {
+    display: block;
+    font-size: 8vw;
+  }
+  .full-width-container .numberDataContainer .numberData sup {
+    font-size: 5vw;
+  }
+  .full-width-container .image-caption {
+    padding: 10px 22%;
   }
 }
 .navbar-absolute-top {
@@ -6619,17 +6734,69 @@ img.bg {
           transform: translate3d(0px, 0px, 0px);
   z-index: 1030;
   top: 0;
+  background: none;
 }
 .navbar-default {
-  background: url(../img/bg_alpha.png) repeat;
-  width: 980px;
-  margin: 0 auto;
+  background: none;
   border: none;
 }
 .navbar-nav {
   position: absolute;
   bottom: 0;
   right: 0;
+}
+.navbar-toggle {
+  float: left;
+  margin-left: 10px;
+}
+@media (min-width: 768px) {
+  .logo {
+    float: left;
+    background: url(../img/icon.png) no-repeat;
+    width: 90px;
+    height: 60px;
+    margin: 20px 30px;
+  }
+  .navbar-default .navbar-nav li {
+    margin: 0 20px 10px;
+  }
+  .navbar-default .navbar-nav li a {
+    padding: 0;
+    color: #fff;
+  }
+  .navbar-default .navbar-nav li a:hover,
+  .navbar-default .navbar-nav li a:focus {
+    color: #fff;
+    border-bottom: 1px solid #fff;
+  }
+  .navbar-default {
+    background: url(../img/bg_alpha.png) repeat;
+    width: 80%;
+    margin: 0 auto;
+    border: none;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: bold;
+  }
+  .navbar-default .navbar-nav > .active > a,
+  .navbar-default .navbar-nav > .active > a:hover,
+  .navbar-default .navbar-nav > .active > a:focus {
+    background: none;
+    color: #fff;
+    border-bottom: 1px solid #fff;
+  }
+}
+@media (min-width: 992px) {
+  .navbar-default .navbar-nav li {
+    margin: 0 30px 10px;
+  }
+  .navbar-default .navbar-nav li a {
+    padding: 0;
+    color: #fff;
+  }
+  .navbar-default {
+    width: 72.5%;
+  }
 }
 .sidebar {
   position: relative;

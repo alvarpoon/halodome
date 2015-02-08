@@ -15,6 +15,8 @@
  * - You're not logged in as an administrator
  */
 function roots_scripts() {
+  wp_enqueue_style('google_fonts', 'http://fonts.googleapis.com/css?family=Open+Sans:400,700,800', false, '9880649384aea9f1ee166331c0a30daa');
+  
   /**
    * The build task in Grunt renames production assets with a hash
    * Read the asset names from assets-manifest.json

@@ -1,8 +1,8 @@
-<section class="full-width-container">
+	<section class="full-width-container">
   <img src="<?=get_stylesheet_directory_uri()?>/assets/img/main-img-1.jpg" class="bg" />
   <? get_template_part('templates/header-top-navbar');?>
   <div class="overlayContent">
-	  <div style="border: 1px solid #fff; margin:16% auto 0; min-width: auto; width: 30%;">
+	  <div class="pageHeading hidden-xs">
 		<h1>HALODOME</h1>
 		<h3>Spectacular Space</h3>
 	  </div>
@@ -30,9 +30,26 @@
 <section class="full-width-container half-height">
   <img src="<?=get_stylesheet_directory_uri()?>/assets/img/main-img-4.jpg" class="bg" />
   <div class="overlayContent" style="background:url(<?=get_stylesheet_directory_uri()?>/assets/img/bg_alpha.png) repeat;">
-  		<h2>Numbers in Halodome</h2>
-	  <div class="image-caption">
-		
+	  <div class="numberDataContainer">
+	  	<h2>Numbers in Halodome</h2>
+		<div class="clearfix">
+			<div class="numberData">
+				<span>70</span>
+				PREFABRICATED AND SUSTAINABLY SOURCED TIMBER PANELS
+			</div>
+			<div class="numberData">
+				<span>6.5m<sup>2</sup></span>
+				HEIGHT OF HALODOME
+			</div>
+			<div class="numberData">
+				<span>2</span>
+				TOTAL 2 FLOOR LEVELS
+			</div>
+			<div class="numberData">
+				<span>160m<sup>2</sup></span>
+				USABLE FLOOR AREA
+			</div>
+		</div>
 	  </div>
 	</div>
 </section>
@@ -46,7 +63,7 @@
 </section> 		
 <section class="full-width-container" id="halodome-floorplan">
   <h2>Halodome Floorplan</h2>
-  <img src="<?=get_stylesheet_directory_uri()?>/assets/img/floor-plan.jpg" />
+  <img src="<?=get_stylesheet_directory_uri()?>/assets/img/floor-plan.jpg" class="img-responsive"/>
 </section>
 <section class="full-width-container">
   <img src="<?=get_stylesheet_directory_uri()?>/assets/img/main-img-6.jpg" class="bg" />

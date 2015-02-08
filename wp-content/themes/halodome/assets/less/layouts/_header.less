@@ -1,3 +1,9 @@
+//===============================================================================
+//===============================================================================
+// mobile
+//===============================================================================
+//===============================================================================
+
 .banner { }
 
 .navbar-absolute-top {
@@ -7,17 +13,93 @@
     transform: translate3d(0px, 0px, 0px);
     z-index: 1030;
     top: 0;
+	background:none;
 }
 
-.navbar-default {
-    background:url(../img/bg_alpha.png) repeat;
-	width:980px;
-	margin:0 auto;
-    border:none;
+.navbar-default{
+	background:none;
+	border:none;
 }
 
 .navbar-nav{
 	position:absolute;
 	bottom:0;
 	right:0;
+}
+
+.navbar-toggle{
+	float:left;
+	margin-left:10px;
+}
+
+//===============================================================================
+//===============================================================================
+// tablet
+//===============================================================================
+//===============================================================================
+@media (min-width: @screen-sm-min) {
+	.logo{
+		float:left; background:url(../img/icon.png)  no-repeat; width:90px; height:60px; margin:20px 30px;
+	}
+	.navbar-default{
+		.navbar-nav{ 
+			li {
+				margin: 0 20px 10px;
+				a{
+					padding:0;
+					color:#fff;
+					&:hover, &:focus{
+						color:#fff;
+						border-bottom:1px solid #fff;
+					}
+				}
+			}
+		}
+	}
+	
+	.navbar-default {
+		background:url(../img/bg_alpha.png) repeat;
+		width:80%;
+		margin:0 auto;
+		border:none;
+		text-transform:uppercase;
+		font-size:13px;
+		font-weight:bold;
+	}
+	
+	.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus{
+		background:none;
+		color:#fff;
+		border-bottom:1px solid #fff;
+	}
+}
+
+//===============================================================================
+//===============================================================================
+// desktop
+//===============================================================================
+//===============================================================================
+@media (min-width: @screen-md-min) {
+	.navbar-default{
+		.navbar-nav{ 
+			li {
+				margin: 0 30px 10px;
+				a{
+					padding:0;
+					color:#fff;
+				}
+			}
+		}
+	}
+	.navbar-default {
+		width:72.5%;
+	}
+}
+
+//===============================================================================
+//===============================================================================
+// wide desktop
+//===============================================================================
+//===============================================================================
+@media (min-width: @screen-lg-min) {
 }
