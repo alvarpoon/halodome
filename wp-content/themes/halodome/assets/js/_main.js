@@ -58,6 +58,39 @@ var UTIL = {
   }
 };
 
+$(document).ready(function() {
+	
+		var $el, leftPos, newWidth,
+			$mainNav = $("#menu-main");
+		
+		$mainNav.append("<li id='magic-line'></li>");
+		var $magicLine = $("#magic-line");
+		
+		$magicLine
+			.width($(".active").width())
+			.css("left", $(".active a").parent().position().left)
+			.data("origLeft", $magicLine.position().left)
+			.data("origWidth", $magicLine.width());
+			
+		$("#menu-main li a").hover(function() {
+			$el = $(this);
+			leftPos = $el.parent().position().left;
+			console.log(leftPos);
+			newWidth = $el.parent().width();
+			//console.log(newWidth);
+			$magicLine.stop().animate({
+				left: leftPos,
+				width: newWidth
+			});
+		}, function() {
+			$magicLine.stop().animate({
+				left: $magicLine.data("origLeft"),
+				width: $magicLine.data("origWidth")
+			});    
+		});
+	}
+);
+
 $(document).ready(UTIL.loadEvents);
 
 })(jQuery); // Fully reference jQuery after this point.

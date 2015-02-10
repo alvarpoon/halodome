@@ -72,8 +72,8 @@
 <section class="full-width-container">
   <img src="<?=get_stylesheet_directory_uri()?>/assets/img/main-img-6.jpg" class="bg" />
 </section>
-<section class="full-width-container">
-  <img src="<?=get_stylesheet_directory_uri()?>/assets/img/img_video_dummy.jpg" class="bg" />
+<section class="embed-responsive embed-responsive-16by9">
+  <iframe class="embed-responsive-item" src="//player.vimeo.com/video/74683867" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="http://vimeo.com/74683867">THE LYCHEE GARDEN</a> from <a href="http://vimeo.com/chomicz">Alex Chomicz</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
 </section>
 <div style="width:100$; min-height:90px; padding:10px 0 0 30px; color:#fff; background:#000;">
 	COPYRIGHT © 2014 HALODOME. ALL RIGHTS RESERVED.

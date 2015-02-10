@@ -6778,6 +6778,9 @@ img.bg {
   top: 0;
   background: none;
 }
+.navbar-absolute-top .navbar-collapse {
+  padding: 0;
+}
 .navbar-default {
   background: none;
   border: none;
@@ -6787,6 +6790,14 @@ img.bg {
   position: absolute;
   bottom: 0;
   right: 0;
+}
+.navbar-nav #magic-line {
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  width: 100px;
+  height: 1px;
+  background: #fff;
 }
 .navbar-toggle {
   float: right;
@@ -6816,7 +6827,7 @@ img.bg {
   .navbar-default .navbar-nav li a:hover,
   .navbar-default .navbar-nav li a:focus {
     color: #fff;
-    border-bottom: 1px solid #fff;
+    border-bottom: none;
   }
   .navbar-default {
     background: url(../img/bg_alpha.png) repeat;
@@ -6831,7 +6842,7 @@ img.bg {
   .navbar-default .navbar-nav > .active > a:focus {
     background: none;
     color: #fff;
-    border-bottom: 1px solid #fff;
+    border-bottom: none;
   }
 }
 @media (min-width: 992px) {
