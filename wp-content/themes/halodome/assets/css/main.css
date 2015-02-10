@@ -6532,12 +6532,35 @@ figure.alignnone {
   position: relative;
   text-align: center;
   font-size: 15px;
+  font-weight: 300;
 }
 .full-width-container .overlayContent {
   position: relative;
   z-index: 999;
   color: #fff;
   width: 100%;
+}
+.full-width-container .pageHeadingAbsolute {
+  color: #fff;
+  border: 1px solid #fff;
+  margin: 10% auto 0;
+  min-width: auto;
+  width: 50%;
+  letter-spacing: 3px;
+  padding: 15px 0;
+  text-transform: uppercase;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  margin-left: -25%;
+}
+.full-width-container .pageHeadingAbsolute h1 {
+  margin: 0;
+  font-size: 20px;
+}
+.full-width-container .pageHeadingAbsolute h3 {
+  font-size: 10px;
+  margin: 5px 0 0 0;
 }
 .full-width-container .image-caption {
   background: url(../img/bg_alpha.png) repeat;
@@ -6647,6 +6670,7 @@ img.bg {
     right: 0!important;
   }
   .full-width-container .rightContent .image-caption {
+    background: url(../img/bg_alpha_r.png) no-repeat left;
     height: 100%;
     right: 0;
     padding: 20% 11% 0 11%;
@@ -6661,6 +6685,7 @@ img.bg {
     left: 0;
   }
   .full-width-container .leftContent .image-caption {
+    background: url(../img/bg_alpha_l.png) no-repeat right;
     height: 100%;
     left: 0;
     padding: 20% 11% 0 11%;
@@ -6739,6 +6764,7 @@ img.bg {
 .navbar-default {
   background: none;
   border: none;
+  font-weight: 600;
 }
 .navbar-nav {
   position: absolute;
@@ -6746,8 +6772,14 @@ img.bg {
   right: 0;
 }
 .navbar-toggle {
+  float: right;
+  margin-right: 10px;
+}
+.logo {
   float: left;
-  margin-left: 10px;
+  width: 70px;
+  height: auto;
+  margin: 10px;
 }
 @media (min-width: 768px) {
   .logo {

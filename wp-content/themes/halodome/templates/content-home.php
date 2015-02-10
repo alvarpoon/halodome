@@ -1,6 +1,10 @@
-	<section class="full-width-container">
+<section class="full-width-container">
   <img src="<?=get_stylesheet_directory_uri()?>/assets/img/main-img-1.jpg" class="bg" />
   <? get_template_part('templates/header-top-navbar');?>
+  <div class="pageHeadingAbsolute hidden-sm hidden-md hidden-lg">
+	<h1>HALODOME</h1>
+	<h3>Spectacular Space</h3>
+  </div>
   <div class="overlayContent">
 	  <div class="pageHeading hidden-xs">
 		<h1>HALODOME</h1>
@@ -68,3 +72,9 @@
 <section class="full-width-container">
   <img src="<?=get_stylesheet_directory_uri()?>/assets/img/main-img-6.jpg" class="bg" />
 </section>
+<section class="full-width-container">
+  <img src="<?=get_stylesheet_directory_uri()?>/assets/img/img_video_dummy.jpg" class="bg" />
+</section>
+<div style="width:100$; min-height:90px; padding:10px 0 0 30px; color:#fff; background:#000;">
+	COPYRIGHT © 2014 HALODOME. ALL RIGHTS RESERVED.
+</div>
