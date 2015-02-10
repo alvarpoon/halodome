@@ -29,7 +29,6 @@
 	position:relative;
 	text-align:center;
 	font-size:15px;
-	font-weight:300;
 	.overlayContent{
 		position:relative;
 		z-index:999;
@@ -63,6 +62,7 @@
 		padding:10px 15%;
 		position: relative;
 		width:100%;
+		font-weight:300;
 	}
 	.leftContent, .rightContent{
 		color:#fff;
@@ -198,7 +198,7 @@ img.bg {
 		.numberDataContainer{
 			height:100%;
 			position:absolute;
-			padding:4% 4%;
+			padding:4%;
 			font-size:1.7vw;
 			.numberData{
 				float:left;
@@ -275,4 +275,21 @@ img.bg {
 //===============================================================================
 //===============================================================================
 @media (min-width: @screen-lg-min) {
+	.full-width-container{
+		.numberDataContainer{
+			width:100%;
+			padding:4% 3%;
+			font-size:1.0vw;
+			.numberData{
+				margin-top:4%;
+				span{
+					display:block;
+					font-size: 6.5vw;
+				}
+				sup{
+					font-size: 5vw;
+				}
+			}
+		}
+	}
 }

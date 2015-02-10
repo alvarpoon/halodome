@@ -1396,7 +1396,7 @@ pre code {
     width: 970px;
   }
 }
-@media (min-width: 9999px) {
+@media (min-width: 1280px) {
   .container {
     width: 1170px;
   }
@@ -1889,7 +1889,7 @@ pre code {
     margin-left: 0%;
   }
 }
-@media (min-width: 9999px) {
+@media (min-width: 1280px) {
   .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
     float: left;
   }
@@ -6330,7 +6330,7 @@ button.close {
     display: inline-block !important;
   }
 }
-@media (min-width: 992px) and (max-width: 9998px) {
+@media (min-width: 992px) and (max-width: 1279px) {
   .visible-md {
     display: block !important;
   }
@@ -6345,22 +6345,22 @@ button.close {
     display: table-cell !important;
   }
 }
-@media (min-width: 992px) and (max-width: 9998px) {
+@media (min-width: 992px) and (max-width: 1279px) {
   .visible-md-block {
     display: block !important;
   }
 }
-@media (min-width: 992px) and (max-width: 9998px) {
+@media (min-width: 992px) and (max-width: 1279px) {
   .visible-md-inline {
     display: inline !important;
   }
 }
-@media (min-width: 992px) and (max-width: 9998px) {
+@media (min-width: 992px) and (max-width: 1279px) {
   .visible-md-inline-block {
     display: inline-block !important;
   }
 }
-@media (min-width: 9999px) {
+@media (min-width: 1280px) {
   .visible-lg {
     display: block !important;
   }
@@ -6375,17 +6375,17 @@ button.close {
     display: table-cell !important;
   }
 }
-@media (min-width: 9999px) {
+@media (min-width: 1280px) {
   .visible-lg-block {
     display: block !important;
   }
 }
-@media (min-width: 9999px) {
+@media (min-width: 1280px) {
   .visible-lg-inline {
     display: inline !important;
   }
 }
-@media (min-width: 9999px) {
+@media (min-width: 1280px) {
   .visible-lg-inline-block {
     display: inline-block !important;
   }
@@ -6400,12 +6400,12 @@ button.close {
     display: none !important;
   }
 }
-@media (min-width: 992px) and (max-width: 9998px) {
+@media (min-width: 992px) and (max-width: 1279px) {
   .hidden-md {
     display: none !important;
   }
 }
-@media (min-width: 9999px) {
+@media (min-width: 1280px) {
   .hidden-lg {
     display: none !important;
   }
@@ -6532,7 +6532,6 @@ figure.alignnone {
   position: relative;
   text-align: center;
   font-size: 15px;
-  font-weight: 300;
 }
 .full-width-container .overlayContent {
   position: relative;
@@ -6567,6 +6566,7 @@ figure.alignnone {
   padding: 10px 15%;
   position: relative;
   width: 100%;
+  font-weight: 300;
 }
 .full-width-container .leftContent,
 .full-width-container .rightContent {
@@ -6693,7 +6693,7 @@ img.bg {
   .full-width-container .numberDataContainer {
     height: 100%;
     position: absolute;
-    padding: 4% 4%;
+    padding: 4%;
     font-size: 1.7vw;
   }
   .full-width-container .numberDataContainer .numberData {
@@ -6749,6 +6749,23 @@ img.bg {
   }
   .full-width-container .image-caption {
     padding: 10px 22%;
+  }
+}
+@media (min-width: 1280px) {
+  .full-width-container .numberDataContainer {
+    width: 100%;
+    padding: 4% 3%;
+    font-size: 1.0vw;
+  }
+  .full-width-container .numberDataContainer .numberData {
+    margin-top: 4%;
+  }
+  .full-width-container .numberDataContainer .numberData span {
+    display: block;
+    font-size: 6.5vw;
+  }
+  .full-width-container .numberDataContainer .numberData sup {
+    font-size: 5vw;
   }
 }
 .navbar-absolute-top {
@@ -6808,7 +6825,6 @@ img.bg {
     border: none;
     text-transform: uppercase;
     font-size: 13px;
-    font-weight: bold;
   }
   .navbar-default .navbar-nav > .active > a,
   .navbar-default .navbar-nav > .active > a:hover,

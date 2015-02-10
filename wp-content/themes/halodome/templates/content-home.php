@@ -1,6 +1,6 @@
 <section class="full-width-container">
   <img src="<?=get_stylesheet_directory_uri()?>/assets/img/main-img-1.jpg" class="bg" />
-  <? get_template_part('templates/header-top-navbar');?>
+  <? //get_template_part('templates/header-top-navbar');?>
   <div class="pageHeadingAbsolute hidden-sm hidden-md hidden-lg">
 	<h1>HALODOME</h1>
 	<h3>Spectacular Space</h3>
