@@ -6462,6 +6462,41 @@ body {
   height: 100%;
   font-family: 'Open Sans', sans-serif;
 }
+.cd-top {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  position: fixed;
+  bottom: 40px;
+  right: 10px;
+  /* image replacement properties */
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  background: url(../img/btn_backtotop.png) no-repeat center 50%;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity .3s 0s, visibility 0s .3s;
+  -o-transition: opacity .3s 0s, visibility 0s .3s;
+     transition: opacity .3s 0s, visibility 0s .3s;
+  z-index: 2000;
+}
+.cd-top.cd-is-visible,
+.cd-top.cd-fade-out,
+.no-touch .cd-top:hover {
+  -webkit-transition: opacity .3s 0s, visibility 0s 0s;
+  -o-transition: opacity .3s 0s, visibility 0s 0s;
+     transition: opacity .3s 0s, visibility 0s 0s;
+}
+.cd-top.cd-is-visible {
+  /* the button becomes visible */
+  visibility: visible;
+  opacity: 1;
+}
+.cd-top.cd-fade-out {
+  /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
+  opacity: .5;
+}
 .comment-list ol {
   list-style: none;
 }
@@ -6505,6 +6540,7 @@ figure.alignnone {
   float: none;
   height: 100%!important;
   min-height: 100%!important;
+  height: auto !important;
   position: relative;
   min-height: 1px;
   padding-left: 15px;
@@ -6531,7 +6567,7 @@ figure.alignnone {
 .full-width-container {
   position: relative;
   text-align: center;
-  font-size: 15px;
+  font-size: 12px;
 }
 .full-width-container .overlayContent {
   position: relative;
@@ -6542,16 +6578,15 @@ figure.alignnone {
 .full-width-container .pageHeadingAbsolute {
   color: #fff;
   border: 1px solid #fff;
-  margin: 10% auto 0;
+  margin: 16% auto 0 -27.5%;
   min-width: auto;
-  width: 50%;
+  width: 55%;
   letter-spacing: 3px;
-  padding: 15px 0;
+  padding: 10px 0;
   text-transform: uppercase;
   position: absolute;
   top: 20px;
   left: 50%;
-  margin-left: -25%;
 }
 .full-width-container .pageHeadingAbsolute h1 {
   margin: 0;
@@ -6592,10 +6627,11 @@ figure.alignnone {
 .full-width-container h2 {
   margin: 0 auto 0 auto;
   padding: 10px 0;
-  font-size: 6vw;
+  font-size: 5vw;
   border: 1px solid #fff;
-  width: 80%;
+  width: 65%;
   text-align: center;
+  text-transform: uppercase;
 }
 img.bg {
   /* Set rules to fill background */
@@ -6609,9 +6645,9 @@ img.bg {
 }
 #halodome-floorplan h2 {
   border: 1px solid #000;
-  width: 80%;
+  width: 65%;
   margin: 5% auto 2% auto;
-  font-size: 6vw;
+  font-size: 5vw;
 }
 #halodome-floorplan img {
   margin: 0 auto;
@@ -6626,6 +6662,7 @@ img.bg {
   }
   .full-width-container {
     position: relative;
+    font-size: 15px;
     text-align: center;
   }
   .full-width-container .pageHeading {
@@ -6715,7 +6752,6 @@ img.bg {
     letter-spacing: 2px;
     margin: 0 auto;
     padding: 15px;
-    text-transform: uppercase;
     width: 50%;
     font-size: 2.7vw;
   }
@@ -6723,6 +6759,7 @@ img.bg {
     width: 36%;
     margin: 5% auto 2% auto;
     font-size: 1.9vw;
+    text-transform: uppercase;
   }
 }
 @media (min-width: 992px) {
@@ -6770,7 +6807,7 @@ img.bg {
 }
 .navbar-absolute-top {
   left: 0;
-  position: absolute;
+  position: fixed;
   right: 0;
   -webkit-transform: translate3d(0px, 0px, 0px);
           transform: translate3d(0px, 0px, 0px);
@@ -6782,16 +6819,15 @@ img.bg {
   padding: 0;
 }
 .navbar-default {
-  background: none;
+  background: url(../img/bg_alpha.png) repeat;
   border: none;
   font-weight: 600;
 }
 .navbar-nav {
-  position: absolute;
-  bottom: 0;
-  right: 0;
+  margin: 0;
 }
 .navbar-nav #magic-line {
+  display: none;
   position: absolute;
   bottom: 0px;
   left: 0;
@@ -6805,7 +6841,7 @@ img.bg {
 }
 .logo {
   float: left;
-  width: 70px;
+  width: 65px;
   height: auto;
   margin: 10px;
 }
@@ -6816,6 +6852,10 @@ img.bg {
     width: 90px;
     height: 60px;
     margin: 20px 30px;
+  }
+  .navbar-absolute-top {
+    position: absolute;
+    background: none;
   }
   .navbar-default .navbar-nav li {
     margin: 0 20px 10px;
@@ -6828,6 +6868,14 @@ img.bg {
   .navbar-default .navbar-nav li a:focus {
     color: #fff;
     border-bottom: none;
+  }
+  .navbar-nav {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  .navbar-nav #magic-line {
+    display: block;
   }
   .navbar-default {
     background: url(../img/bg_alpha.png) repeat;
@@ -6867,6 +6915,26 @@ img.bg {
   .sidebar {
     float: left;
     width: 33.33333333%;
+  }
+}
+.copyright {
+  width: 100%;
+  min-height: 90px;
+  padding: 10px;
+  color: #fff;
+  background: #000;
+  font-size: 11px;
+}
+@media (min-width: 768px) {
+  .copyright {
+    font-size: 13px;
+    padding: 10px 0 0 30px;
+  }
+}
+@media (min-width: 992px) {
+  .copyright {
+    font-size: 15px;
+    padding: 10px 0 0 30px;
   }
 }
 .cd-main-content {

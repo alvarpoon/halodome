@@ -19,7 +19,7 @@
   <img src="<?=get_stylesheet_directory_uri()?>/assets/img/main-img-2.jpg" class="bg" />
   <div class="overlayContent">
 	  <div class="image-caption">
-		<p>Domes are ancient, from igloos to The Pantheon the experience inside them is visceral and wonderful with a e nveloping sense of calm created by the arching walls that become roof and then walls again in a single sweep.</p>
+		<p>Domes are ancient, from igloos to The Pantheon the experience inside them is visceral and wonderful with a enveloping sense of calm created by the arching walls that become roof and then walls again in a single sweep.</p>
 	  </div>
 	</div>
 </section>
@@ -75,6 +75,3 @@
 <section class="embed-responsive embed-responsive-16by9">
   <iframe class="embed-responsive-item" src="//player.vimeo.com/video/74683867" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="http://vimeo.com/74683867">THE LYCHEE GARDEN</a> from <a href="http://vimeo.com/chomicz">Alex Chomicz</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
 </section>
-<div style="width:100$; min-height:90px; padding:10px 0 0 30px; color:#fff; background:#000;">
-	COPYRIGHT © 2014 HALODOME. ALL RIGHTS RESERVED.
-</div>

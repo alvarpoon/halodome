@@ -8,7 +8,7 @@
 
 .navbar-absolute-top {
     left: 0;
-    position: absolute;
+    position: fixed;
     right: 0;
     transform: translate3d(0px, 0px, 0px);
     z-index: 1030;
@@ -20,16 +20,15 @@
 }
 
 .navbar-default{
-	background:none;
+	background:url(../img/bg_alpha.png) repeat;
 	border:none;
 	font-weight:600;
 }
 
 .navbar-nav{
-	position:absolute;
-	bottom:0;
-	right:0;
+	margin:0;
 	#magic-line { 
+		display:none;
 		position: absolute; 
 		bottom: 0px; 
 		left: 0; 
@@ -45,7 +44,10 @@
 }
 
 .logo{
-	float:left; width:70px; height:auto; margin:10px;
+	float:left; 
+	width:65px; 
+	height:auto; 
+	margin:10px;
 }
 
 //===============================================================================
@@ -56,6 +58,10 @@
 @media (min-width: @screen-sm-min) {
 	.logo{
 		float:left; background:url(../img/icon.png) no-repeat; width:90px; height:60px; margin:20px 30px;
+	}
+	.navbar-absolute-top {
+		position:absolute;
+		background:none;
 	}
 	.navbar-default{
 		.navbar-nav{ 
@@ -70,6 +76,15 @@
 					}
 				}
 			}
+		}
+	}
+	
+	.navbar-nav{
+		position:absolute;
+		bottom:0;
+		right:0;
+		#magic-line { 
+			display:block;
 		}
 	}
 	
