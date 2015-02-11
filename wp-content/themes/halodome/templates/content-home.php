@@ -1,6 +1,10 @@
 <section class="full-width-container">
-  <img src="<?=get_stylesheet_directory_uri()?>/assets/img/main-img-1.jpg" class="bg" />
-  <? //get_template_part('templates/header-top-navbar');?>
+  <img id="mainImg1" class="bg" 
+  	data-bttrlazyloading-animation="fadeIn"
+  	data-bttrlazyloading-xs-src="<?=get_stylesheet_directory_uri()?>/assets/img/main-img-1.jpg" 
+  	data-bttrlazyloading-sm-src="<?=get_stylesheet_directory_uri()?>/assets/img/main-img-1.jpg"
+    data-bttrlazyloading-md-src="<?=get_stylesheet_directory_uri()?>/assets/img/main-img-1.jpg"
+    data-bttrlazyloading-lg-src="<?=get_stylesheet_directory_uri()?>/assets/img/main-img-1.jpg" />
   <div class="pageHeadingAbsolute hidden-sm hidden-md hidden-lg">
 	<h1>HALODOME</h1>
 	<h3>Spectacular Space</h3>
@@ -16,7 +20,12 @@
 	</div>
 </section>
 <section class="full-width-container">
-  <img src="<?=get_stylesheet_directory_uri()?>/assets/img/main-img-2.jpg" class="bg" />
+  <img id="mainImg2" class="bg"
+  	data-bttrlazyloading-animation="fadeIn" 
+  	data-bttrlazyloading-xs-src="<?=get_stylesheet_directory_uri()?>/assets/img/main-img-2.jpg" 
+  	data-bttrlazyloading-sm-src="<?=get_stylesheet_directory_uri()?>/assets/img/main-img-2.jpg"
+    data-bttrlazyloading-md-src="<?=get_stylesheet_directory_uri()?>/assets/img/main-img-2.jpg"
+    data-bttrlazyloading-lg-src="<?=get_stylesheet_directory_uri()?>/assets/img/main-img-2.jpg" />
   <div class="overlayContent">
 	  <div class="image-caption">
 		<p>Domes are ancient, from igloos to The Pantheon the experience inside them is visceral and wonderful with a enveloping sense of calm created by the arching walls that become roof and then walls again in a single sweep.</p>
@@ -24,7 +33,12 @@
 	</div>
 </section>
 <section class="full-width-container half-height">
-  <img src="<?=get_stylesheet_directory_uri()?>/assets/img/main-img-3.jpg" class="bg" />
+  <img id="mainImg3" class="bg" 
+  	data-bttrlazyloading-animation="fadeIn"
+  	data-bttrlazyloading-xs-src="<?=get_stylesheet_directory_uri()?>/assets/img/main-img-3.jpg" 
+  	data-bttrlazyloading-sm-src="<?=get_stylesheet_directory_uri()?>/assets/img/main-img-3.jpg"
+    data-bttrlazyloading-md-src="<?=get_stylesheet_directory_uri()?>/assets/img/main-img-3.jpg"
+    data-bttrlazyloading-lg-src="<?=get_stylesheet_directory_uri()?>/assets/img/main-img-3.jpg" />
   <div class="rightContent">
 	  <div class="image-caption">
 		<p>Built to German Passivehaus specification, the highest standard in the world for energy consumption, the concept uses seventy fully prefabricated and sustainably sourced timber panels bolted together to form a single dome space 13 meters x 6.5 meters high.</p>
@@ -32,7 +46,12 @@
 	</div>
 </section>
 <section class="full-width-container half-height">
-  <img src="<?=get_stylesheet_directory_uri()?>/assets/img/main-img-4.jpg" class="bg" />
+  <img id="mainImg4" class="bg" 
+  	data-bttrlazyloading-animation="fadeIn"
+  	data-bttrlazyloading-xs-src="<?=get_stylesheet_directory_uri()?>/assets/img/main-img-4.jpg" 
+  	data-bttrlazyloading-sm-src="<?=get_stylesheet_directory_uri()?>/assets/img/main-img-4.jpg"
+    data-bttrlazyloading-md-src="<?=get_stylesheet_directory_uri()?>/assets/img/main-img-4.jpg"
+    data-bttrlazyloading-lg-src="<?=get_stylesheet_directory_uri()?>/assets/img/main-img-4.jpg" />
   <div class="overlayContent" style="background:url(<?=get_stylesheet_directory_uri()?>/assets/img/bg_alpha.png) repeat;">
 	  <div class="numberDataContainer">
 	  	<h2>Numbers in Halodome</h2>
@@ -58,7 +77,12 @@
 	</div>
 </section>
 <section class="full-width-container half-height">
-  <img src="<?=get_stylesheet_directory_uri()?>/assets/img/main-img-5.jpg" class="bg" />
+  <img id="mainImg5" class="bg" 
+  	data-bttrlazyloading-animation="fadeIn"
+  	data-bttrlazyloading-xs-src="<?=get_stylesheet_directory_uri()?>/assets/img/main-img-5.jpg" 
+  	data-bttrlazyloading-sm-src="<?=get_stylesheet_directory_uri()?>/assets/img/main-img-5.jpg"
+    data-bttrlazyloading-md-src="<?=get_stylesheet_directory_uri()?>/assets/img/main-img-5.jpg"
+    data-bttrlazyloading-lg-src="<?=get_stylesheet_directory_uri()?>/assets/img/main-img-5.jpg" />
   <div class="leftContent">
 	  <div class="image-caption">
 		<p>The space is completely flexible an can be offered, as in the example shown as a 160m<sup>2</sup> of usable space on two levels with a half size mezzanine floor and central spiral staircase.</p>
@@ -70,7 +94,12 @@
   <img src="<?=get_stylesheet_directory_uri()?>/assets/img/floor-plan.jpg" class="img-responsive"/>
 </section>
 <section class="full-width-container">
-  <img src="<?=get_stylesheet_directory_uri()?>/assets/img/main-img-6.jpg" class="bg" />
+  <img id="mainImg6" class="bg" 
+  	data-bttrlazyloading-animation="fadeIn"
+  	data-bttrlazyloading-xs-src="<?=get_stylesheet_directory_uri()?>/assets/img/main-img-6.jpg" 
+  	data-bttrlazyloading-sm-src="<?=get_stylesheet_directory_uri()?>/assets/img/main-img-6.jpg"
+    data-bttrlazyloading-md-src="<?=get_stylesheet_directory_uri()?>/assets/img/main-img-6.jpg"
+    data-bttrlazyloading-lg-src="<?=get_stylesheet_directory_uri()?>/assets/img/main-img-6.jpg" />
 </section>
 <section class="embed-responsive embed-responsive-16by9">
   <iframe class="embed-responsive-item" src="//player.vimeo.com/video/74683867" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="http://vimeo.com/74683867">THE LYCHEE GARDEN</a> from <a href="http://vimeo.com/chomicz">Alex Chomicz</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
