@@ -6568,7 +6568,7 @@ figure.alignnone {
 .full-width-container {
   position: relative;
   text-align: center;
-  font-size: 12px;
+  font-size: 14px;
 }
 .full-width-container .overlayContent {
   position: relative;
@@ -6636,10 +6636,10 @@ figure.alignnone {
 }
 img.bg {
   /* Set rules to fill background */
-  min-height: 100%;
+  /*min-height: 100%;*/
   /* Set up proportionate scaling */
   width: 100%;
-  height: auto;
+  height: auto !important;
 }
 #halodome-floorplan {
   text-align: center;
@@ -6659,7 +6659,7 @@ img.bg {
   }
   .half-height img.bg {
     max-height: 511px;
-    height: auto;
+    height: auto !important;
   }
   .full-width-container {
     position: relative;
@@ -6846,6 +6846,17 @@ img.bg {
   height: auto;
   margin: 10px;
 }
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  background: none;
+  color: #fff;
+  border-bottom: none;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #fff;
+}
 @media (min-width: 768px) {
   .logo {
     float: left;
@@ -6885,13 +6896,6 @@ img.bg {
   }
   .navbar-default .navbar-nav #magic-line {
     display: block;
-  }
-  .navbar-default .navbar-nav > .active > a,
-  .navbar-default .navbar-nav > .active > a:hover,
-  .navbar-default .navbar-nav > .active > a:focus {
-    background: none;
-    color: #fff;
-    border-bottom: none;
   }
 }
 @media (min-width: 992px) {
