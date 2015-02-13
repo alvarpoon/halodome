@@ -6642,6 +6642,7 @@ figure.alignnone {
 .full-width-container .fullOverlay {
   padding-top: 5%;
   font-size: 13px;
+  background: url(../img/bg_alpha_dark.png) repeat;
 }
 .full-width-container .fullOverlay .aboutParagraph {
   margin: 5% auto 0 auto;
@@ -6669,6 +6670,29 @@ figure.alignnone {
 .full-width-container .fullOverlay .aboutList ul li {
   font-weight: 300;
 }
+.full-width-container .fullOverlay .contactContainer {
+  margin: 0 auto;
+  float: none;
+  text-align: left;
+}
+.full-width-container .fullOverlay .contactContainer .title {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 30px;
+  float: left;
+  font-weight: 300;
+}
+.full-width-container .fullOverlay .contactContainer .contactInfo {
+  float: right;
+  font-size: 18px;
+  line-height: 160%;
+  padding-right: 30px;
+}
+.full-width-container .fullOverlay .contactContainer .contactInfo div {
+  border-left: 1px solid #fff;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
 img.bg {
   /* Set rules to fill background */
   /*min-height: 100%;*/
@@ -6687,9 +6711,6 @@ img.bg {
 }
 #halodome-floorplan img {
   margin: 0 auto;
-}
-.fullOverlay {
-  background: url(../img/about/bg_alpha_dark.png) repeat;
 }
 @media (min-width: 768px) {
   .half-height {
