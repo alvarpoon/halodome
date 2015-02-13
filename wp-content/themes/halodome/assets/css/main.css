@@ -6708,10 +6708,10 @@ img.bg {
     right: 0!important;
   }
   .full-width-container .rightContent .image-caption {
-    background: url(../img/bg_alpha_r.png) no-repeat left;
+    background: url(../img/bg_alpha_r.png) no-repeat top left;
     height: 100%;
     right: 0;
-    padding: 20% 11% 0 11%;
+    padding: 40px 11% 0 11%;
   }
   .full-width-container .leftContent {
     width: 35%;
@@ -6723,10 +6723,10 @@ img.bg {
     left: 0;
   }
   .full-width-container .leftContent .image-caption {
-    background: url(../img/bg_alpha_l.png) no-repeat right;
+    background: url(../img/bg_alpha_l.png) no-repeat top right;
     height: 100%;
     left: 0;
-    padding: 20% 11% 0 11%;
+    padding: 40px 11% 0 11%;
   }
   .full-width-container .numberDataContainer {
     height: 100%;
