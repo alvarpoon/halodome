@@ -26,6 +26,14 @@
   }
 }
 
+.sidebar-primary{
+	.main{
+		float:none;
+		width:100% !important;
+		padding:0 !important;	
+	}
+}
+
 .full-width-container{
 	position:relative;
 	text-align:center;
@@ -93,6 +101,37 @@
 		text-align:center;
 		text-transform:uppercase;
 	}
+	
+	.fullOverlay{
+		padding-top:5%;
+		font-size:13px;		
+		.aboutParagraph{
+			margin:5% auto 0 auto;
+			text-align:left;
+			float:none;
+			p{
+				margin:0!important;
+				padding-bottom:10px!important;
+			}
+		}
+		.aboutList{
+			margin:5% auto 0 auto;
+			text-align:left;
+			float:none;
+			.title{
+				font-weight:bold;
+				padding-bottom:10px;
+			}
+			ul{
+				padding-left:15px;
+				padding-bottom:30px;
+				margin:0;
+				li{
+					font-weight:300;
+				}
+			}
+		}
+	}
 }
 
 img.bg {
@@ -115,6 +154,10 @@ img.bg {
 	img{
 		margin:0 auto;
 	}
+}
+
+.fullOverlay{
+	background:url(../img/about/bg_alpha_dark.png) repeat;
 }
 
 //===============================================================================
@@ -222,8 +265,24 @@ img.bg {
 			letter-spacing: 2px;
 			margin: 0 auto;
 			padding: 15px;
-			width: 50%;
-			font-size:2.7vw;
+			width:36%;
+			font-size:1.9vw;
+		}
+		
+		.fullOverlay{
+			.aboutList{
+				div{
+					padding:0;
+				}
+				.floatLeft{
+					float:left;
+					padding-right:50px;
+				}
+				.floatRight{
+					float:right;
+					padding-left:50px;
+				}
+			}
 		}
 	}
 	
@@ -235,6 +294,7 @@ img.bg {
 			text-transform:uppercase;
 		}
 	}
+	
 }
 
 //===============================================================================

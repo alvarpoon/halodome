@@ -6565,6 +6565,11 @@ figure.alignnone {
     width: 66.66666667%;
   }
 }
+.sidebar-primary .main {
+  float: none;
+  width: 100% !important;
+  padding: 0 !important;
+}
 .full-width-container {
   position: relative;
   text-align: center;
@@ -6634,6 +6639,36 @@ figure.alignnone {
   text-align: center;
   text-transform: uppercase;
 }
+.full-width-container .fullOverlay {
+  padding-top: 5%;
+  font-size: 13px;
+}
+.full-width-container .fullOverlay .aboutParagraph {
+  margin: 5% auto 0 auto;
+  text-align: left;
+  float: none;
+}
+.full-width-container .fullOverlay .aboutParagraph p {
+  margin: 0!important;
+  padding-bottom: 10px!important;
+}
+.full-width-container .fullOverlay .aboutList {
+  margin: 5% auto 0 auto;
+  text-align: left;
+  float: none;
+}
+.full-width-container .fullOverlay .aboutList .title {
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+.full-width-container .fullOverlay .aboutList ul {
+  padding-left: 15px;
+  padding-bottom: 30px;
+  margin: 0;
+}
+.full-width-container .fullOverlay .aboutList ul li {
+  font-weight: 300;
+}
 img.bg {
   /* Set rules to fill background */
   /*min-height: 100%;*/
@@ -6652,6 +6687,9 @@ img.bg {
 }
 #halodome-floorplan img {
   margin: 0 auto;
+}
+.fullOverlay {
+  background: url(../img/about/bg_alpha_dark.png) repeat;
 }
 @media (min-width: 768px) {
   .half-height {
@@ -6753,8 +6791,19 @@ img.bg {
     letter-spacing: 2px;
     margin: 0 auto;
     padding: 15px;
-    width: 50%;
-    font-size: 2.7vw;
+    width: 36%;
+    font-size: 1.9vw;
+  }
+  .full-width-container .fullOverlay .aboutList div {
+    padding: 0;
+  }
+  .full-width-container .fullOverlay .aboutList .floatLeft {
+    float: left;
+    padding-right: 50px;
+  }
+  .full-width-container .fullOverlay .aboutList .floatRight {
+    float: right;
+    padding-left: 50px;
   }
   #halodome-floorplan h2 {
     width: 36%;
