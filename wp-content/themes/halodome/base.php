@@ -15,9 +15,9 @@
       <main class="main" role="main">
       	
         <?php include roots_template_path(); ?>
-		<?php get_template_part('templates/footer'); ?>
+		
       </main>
-	
+	<?php get_template_part('templates/footer'); ?>
   	
   <?php wp_footer(); ?>
   <a href="#0" class="cd-top">Top</a>

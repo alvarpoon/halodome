@@ -140,11 +140,10 @@
 				text-transform:uppercase;
 				letter-spacing:3px;
 				font-size:30px;
-				float:left;
 				font-weight:300;
+				margin-bottom:20px;
 			}
 			.contactInfo{
-				float:right;
 				font-size: 18px;
 				line-height: 160%;
 				padding-right: 30px;
@@ -152,11 +151,18 @@
 					border-left:1px solid #fff;
 					padding-left:20px;
 					margin-bottom:20px;
+					a{
+						color:#fff;
+					}
 				}
 			}
 		}
 	}
 }
+
+.heightSync{
+	background:#000;
+}	
 
 img.bg {
   /* Set rules to fill background */
@@ -312,6 +318,17 @@ img.bg {
 			margin:5% auto 2% auto;
 			font-size:1.9vw;
 			text-transform:uppercase;
+		}
+	}
+	
+	.contactContainer{
+		.title{
+			float:left;
+			margin-bottom:0;
+		}
+		.contactInfo{
+			float:right;
+			padding-right: 30px;
 		}
 	}
 	

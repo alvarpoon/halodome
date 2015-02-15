@@ -76,11 +76,15 @@ function magicLine(){
 		.data("origLeft", $magicLine.position().left)
 		.data("origWidth", $magicLine.width());
 			
-	$("#menu-main li a").hover(
+	$("#menu-main > li a").not('ul li ul a').hover(
 		function() {
+			/*if($(this).parent().find('ul').hasClass('sub-menu')){
+				console.log(1);
+				return;	
+			}*/
 			$el = $(this);
 			leftPos = $el.parent().position().left;
-			console.log(leftPos);
+			//console.log(leftPos);
 			newWidth = $el.parent().width();
 			//console.log(newWidth);
 			$magicLine.stop().animate({
@@ -108,12 +112,13 @@ function itemHeightSync(){
 		windowTop = $(window).scrollTop();
 		
 	$('.heightSync .bttrlazyloading-wrapper').css({'height':''});
+	$('.heightSync').css({'height':''});
 	$('.heightReference').css({'height':''});
-	if(windowWidth > 768){
+	if(windowWidth > 740){
 		//var maxHeight = Math.max.apply(null, elementHeights);
 		if($('.heightReference').outerHeight() > $('.heightSync').outerHeight()){
 			$('.heightSync .bttrlazyloading-wrapper').height( $('.heightReference').outerHeight() );
-			$('.heightReference').css({'height':'auto'});
+			$('.heightSync').height( $('.heightReference').outerHeight() );
 		}else{
 			$('.heightReference').css({'height':'auto'});
 		}
@@ -162,7 +167,7 @@ $(document).ready(function($){
 	});
 	
 	$(window).scroll(function() {
-	  itemHeightSync();	
+	  //itemHeightSync();	
 	});
 });
 

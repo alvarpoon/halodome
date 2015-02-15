@@ -56,9 +56,15 @@
 	border-bottom:none;
 }
 
+.navbar-default .navbar-nav > li{
+	position:relative;
+}
+
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus{
 	color:#fff;
 }
+
+
 
 //===============================================================================
 //===============================================================================
@@ -106,6 +112,32 @@
 		}
 	}
 	
+	.menu-projects{
+		&:hover{
+			.sub-menu{
+				display:block;
+			}
+		}
+	}
+	
+	.sub-menu{
+		position:absolute;
+		list-style:none;
+		padding:0;
+		left:-9px;
+		display:none;
+		top:18px;
+		z-index:999;
+		padding-bottom:4px;
+		background:url(../img/bg_alpha.png) no-repeat 0 2px;
+		li{
+			margin:0!important;
+			text-align:center;
+			width:80px;
+			padding:4px 0 0;
+		}
+	}
+	
 	
 }
 
@@ -115,6 +147,8 @@
 //===============================================================================
 //===============================================================================
 @media (min-width: @screen-md-min) {
+
+	
 	.navbar-default{
 		width:72.5%;
 		.navbar-nav{ 

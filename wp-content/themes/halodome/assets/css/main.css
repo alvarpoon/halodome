@@ -6679,11 +6679,10 @@ figure.alignnone {
   text-transform: uppercase;
   letter-spacing: 3px;
   font-size: 30px;
-  float: left;
   font-weight: 300;
+  margin-bottom: 20px;
 }
 .full-width-container .fullOverlay .contactContainer .contactInfo {
-  float: right;
   font-size: 18px;
   line-height: 160%;
   padding-right: 30px;
@@ -6692,6 +6691,12 @@ figure.alignnone {
   border-left: 1px solid #fff;
   padding-left: 20px;
   margin-bottom: 20px;
+}
+.full-width-container .fullOverlay .contactContainer .contactInfo div a {
+  color: #fff;
+}
+.heightSync {
+  background: #000;
 }
 img.bg {
   /* Set rules to fill background */
@@ -6832,6 +6837,14 @@ img.bg {
     font-size: 1.9vw;
     text-transform: uppercase;
   }
+  .contactContainer .title {
+    float: left;
+    margin-bottom: 0;
+  }
+  .contactContainer .contactInfo {
+    float: right;
+    padding-right: 30px;
+  }
 }
 @media (min-width: 992px) {
   .full-width-container .pageHeading {
@@ -6923,6 +6936,9 @@ img.bg {
   color: #fff;
   border-bottom: none;
 }
+.navbar-default .navbar-nav > li {
+  position: relative;
+}
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
   color: #fff;
@@ -6966,6 +6982,26 @@ img.bg {
   }
   .navbar-default .navbar-nav #magic-line {
     display: block;
+  }
+  .menu-projects:hover .sub-menu {
+    display: block;
+  }
+  .sub-menu {
+    position: absolute;
+    list-style: none;
+    padding: 0;
+    left: -9px;
+    display: none;
+    top: 18px;
+    z-index: 999;
+    padding-bottom: 4px;
+    background: url(../img/bg_alpha.png) no-repeat 0 2px;
+  }
+  .sub-menu li {
+    margin: 0!important;
+    text-align: center;
+    width: 80px;
+    padding: 4px 0 0;
   }
 }
 @media (min-width: 992px) {

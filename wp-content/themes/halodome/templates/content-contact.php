@@ -30,7 +30,7 @@
     data-bttrlazyloading-md-src="<?=get_stylesheet_directory_uri()?>/assets/img/contact/contact-img-2.jpg"
     data-bttrlazyloading-lg-src="<?=get_stylesheet_directory_uri()?>/assets/img/contact/contact-img-2.jpg" />
   <div class="overlayContent fullOverlay">
-	<div class="col-sm-7 contactContainer">
+	<div class="col-sm-8 col-md-9 contactContainer clearfix">
     	<div class="title">
         	Halodome
         </div>
@@ -38,14 +38,14 @@
         	<div>
 	        	Craig Wilson <br />
     	        T. +44 7881587231<br />
-        	    E. info@halodome.net
+        	    E. <a href="mailto:info@halodome.net">info@halodome.net</a>
             </div>
             <div>
             	Halodome Ltd<br />
                 17F 2 Heung Yip Street<br />
                 Wong Chuk Hang<br />
                 Hong Kong<br />
-                WWW.halodome.net
+                <a href="http://www.halodome.net">www.halodome.net</a>
             </div>
         </div>
     </div>
