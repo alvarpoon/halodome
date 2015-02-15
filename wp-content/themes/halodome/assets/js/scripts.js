@@ -2163,21 +2163,23 @@ var UTIL = {
   }
 };
 
-$(document).ready(function() {
-	
-		var $el, leftPos, newWidth,
-			$mainNav = $("#menu-main");
+function magicLine(){
+	var $el, leftPos, newWidth,
+		$mainNav = $("#menu-main");
 		
+	if(!$('#magic-line').length){
 		$mainNav.append("<li id='magic-line'></li>");
-		var $magicLine = $("#magic-line");
-		
-		$magicLine
-			.width($(".active").width())
-			.css("left", $(".active a").parent().position().left)
-			.data("origLeft", $magicLine.position().left)
-			.data("origWidth", $magicLine.width());
+	}
+	var $magicLine = $("#magic-line");
+	
+	$magicLine
+		.width($(".active").width())
+		.css("left", $(".active a").parent().position().left)
+		.data("origLeft", $magicLine.position().left)
+		.data("origWidth", $magicLine.width());
 			
-		$("#menu-main li a").hover(function() {
+	$("#menu-main li a").hover(
+		function() {
 			$el = $(this);
 			leftPos = $el.parent().position().left;
 			console.log(leftPos);
@@ -2192,9 +2194,35 @@ $(document).ready(function() {
 				left: $magicLine.data("origLeft"),
 				width: $magicLine.data("origWidth")
 			});    
-		});
+	});	
+}
+
+function checkWindowWidth() {
+	return $(window).width();
+}
+
+function itemHeightSync(){						
+	var elementHeights = $('.heightReference').map(function() {
+		return $(this).outerHeight();
+	  }).get();
+	
+	var windowWidth = checkWindowWidth(),
+		windowTop = $(window).scrollTop();
+		
+	$('.heightSync .bttrlazyloading-wrapper').css({'height':''});
+	$('.heightReference').css({'height':''});
+	if(windowWidth > 768){
+		//var maxHeight = Math.max.apply(null, elementHeights);
+		if($('.heightReference').outerHeight() > $('.heightSync').outerHeight()){
+			$('.heightSync .bttrlazyloading-wrapper').height( $('.heightReference').outerHeight() );
+			$('.heightReference').css({'height':'auto'});
+		}else{
+			$('.heightReference').css({'height':'auto'});
+		}
+	}else{
+		$('.heightSync').css({'height':'auto'});
 	}
-);
+}
 
 $(document).ready(function($){
 	// browser window scroll (in pixels) after which the "back to top" link is shown
@@ -2226,7 +2254,18 @@ $(document).ready(function($){
 		 	}, scroll_top_duration
 		);
 	});
-
+	
+	itemHeightSync();
+	magicLine();
+	
+	$( window ).resize(function() {
+	  itemHeightSync();
+	  magicLine();
+	});
+	
+	$(window).scroll(function() {
+	  itemHeightSync();	
+	});
 });
 
 $(document).ready(UTIL.loadEvents);

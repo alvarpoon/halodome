@@ -6538,7 +6538,7 @@ figure.alignnone {
 .main {
   padding: 0!important;
   margin: 0!important;
-  float: none;
+  float: none!important;
   height: 100%!important;
   min-height: 100%!important;
   height: auto !important;

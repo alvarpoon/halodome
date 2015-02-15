@@ -8,16 +8,17 @@
   <![endif]-->
 
   <?php
-    do_action('get_header');
-    get_template_part('templates/header-top-navbar');
-  ?>
+			do_action('get_header');
+			get_template_part('templates/header-top-navbar');
+		  ?>
 
       <main class="main" role="main">
+      	
         <?php include roots_template_path(); ?>
 		<?php get_template_part('templates/footer'); ?>
       </main>
-
-  
+	
+  	
   <?php wp_footer(); ?>
   <a href="#0" class="cd-top">Top</a>
 </body>
