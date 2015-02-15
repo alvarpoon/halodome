@@ -23,6 +23,10 @@ var Roots = {
   common: {
     init: function() {
       // JavaScript to be fired on all pages
+      $(document).ready(function(){
+			//$('.project-img').bttrlazyloading();
+			$().localScroll({hash:true});
+		});
     }
   },
   // Home page
@@ -35,9 +39,6 @@ var Roots = {
   projects: {
     init: function() {
       // JavaScript to be fired on the about us page
-      	$(document).ready(function(){
-			$('.project-img').bttrlazyloading();
-		});
     }
   }
 };
@@ -174,12 +175,12 @@ $(document).ready(function($){
 $(document).ready(UTIL.loadEvents);
 	
 $(document).ready(function(){
-	$('#mainImg1').bttrlazyloading();
-	$('#mainImg2').bttrlazyloading();
+	//$('#mainImg1').bttrlazyloading();
+	/*$('#mainImg2').bttrlazyloading();
 	$('#mainImg3').bttrlazyloading();
 	$('#mainImg4').bttrlazyloading();
 	$('#mainImg5').bttrlazyloading();
-	$('#mainImg6').bttrlazyloading();
+	$('#mainImg6').bttrlazyloading();*/
 });
 
 })(jQuery); // Fully reference jQuery after this point.

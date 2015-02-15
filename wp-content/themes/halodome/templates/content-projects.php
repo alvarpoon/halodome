@@ -1,10 +1,10 @@
 <section class="full-width-container">
-  <img id="mainImg1" class="bg" 
-  	data-bttrlazyloading-animation="fadeIn"
-  	data-bttrlazyloading-xs-src="<?=get_stylesheet_directory_uri()?>/assets/img/project-banner.jpg" 
-  	data-bttrlazyloading-sm-src="<?=get_stylesheet_directory_uri()?>/assets/img/project-banner.jpg"
-    data-bttrlazyloading-md-src="<?=get_stylesheet_directory_uri()?>/assets/img/project-banner.jpg"
-    data-bttrlazyloading-lg-src="<?=get_stylesheet_directory_uri()?>/assets/img/project-banner.jpg" />
+  <img id="mainImg1" class="bg" src="<?=get_stylesheet_directory_uri()?>/assets/img/project-banner.jpg" />
+  	<!-- data-bttrlazyloading-animation="fadeIn"
+  	data-bttrlazyloading-xs-src="<?//=get_stylesheet_directory_uri()?>/assets/img/project-banner.jpg" 
+  	data-bttrlazyloading-sm-src="<?//=get_stylesheet_directory_uri()?>/assets/img/project-banner.jpg"
+    data-bttrlazyloading-md-src="<?//=get_stylesheet_directory_uri()?>/assets/img/project-banner.jpg"
+    data-bttrlazyloading-lg-src="<?//=get_stylesheet_directory_uri()?>/assets/img/project-banner.jpg" /> -->
   <div class="pageHeadingAbsolute hidden-sm hidden-md hidden-lg">
 	<h1>HALODOME</h1>
 	<h3>Spectacular Space</h3>
@@ -33,14 +33,23 @@
 		$j=0;
 		foreach ( $attachments as $attachment ) {
           $meta = wp_get_attachment_image_src( $attachment->ID, "full" );
+          if($j==0){
+?>
+			<section class="full-width-container" id="<?=$result->post_name?>">
+<?
+          }
+          else{
 ?>
 			<section class="full-width-container">
-			<img class="bg project-img" 
-		  	data-bttrlazyloading-animation="fadeIn"
-		  	data-bttrlazyloading-xs-src="<?=$meta[0]?>" 
-		  	data-bttrlazyloading-sm-src="<?=$meta[0]?>"
-		    data-bttrlazyloading-md-src="<?=$meta[0]?>"
-		    data-bttrlazyloading-lg-src="<?=$meta[0]?>" />
+<?   	
+          }
+?>
+			<img class="bg project-img" src="<?=$meta[0]?>" />
+		  	<!-- data-bttrlazyloading-animation="fadeIn"
+		  	data-bttrlazyloading-xs-src="<?//=$meta[0]?>" 
+		  	data-bttrlazyloading-sm-src="<?//=$meta[0]?>"
+		    data-bttrlazyloading-md-src="<?//=$meta[0]?>"
+		    data-bttrlazyloading-lg-src="<?//=$meta[0]?>" /> -->
 <?
 		    if($j==0){
 		    	if($i%2==0){
@@ -52,7 +61,7 @@
 ?>
 				<div class="<?=$class?>">
 				  <div class="image-caption">
-					<p>The space is completely flexible an can be offered, as in the example shown as a 160m<sup>2</sup> of usable space on two levels with a half size mezzanine floor and central spiral staircase.</p>
+					<?=apply_filters('the_content', $result->post_content);?>
 				  </div>
 				</div>
 <?

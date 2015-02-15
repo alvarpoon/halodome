@@ -2103,7 +2103,304 @@ Full source at https://github.com/shprink/BttrLazyLoading
 
 MIT License, https://github.com/shprink/BttrLazyLoading/blob/master/LICENSE
 */
-(function(){"use strict";var t,i,n,r={}.hasOwnProperty;t=jQuery,i=function(){function i(i,n){var r;null==n&&(n={}),this.$img=t(i),this.loaded=!1,this.loading=!1,r=t.extend(!0,{},t.bttrlazyloading.constructor.options),this.options=t.extend(!0,r,n),this.ranges=t.bttrlazyloading.constructor.ranges,this.$container=t(this.options.container),"number"==typeof window.devicePixelRatio&&(this.constructor.dpr=window.devicePixelRatio),this.whiteList=["lg","md","sm","xs"],this.blackList=[],A.call(this),this.$wrapper=t('<span class="bttrlazyloading-wrapper"></span>'),this.options.wrapperClasses&&"string"==typeof this.options.wrapperClasses&&this.$wrapper.addClass(this.options.wrapperClasses),this.$img.before(this.$wrapper),this.$clone=t('<canvas class="bttrlazyloading-clone"></canvas>'),g.call(this),this.$wrapper.append(this.$clone),this.$img.hide(),this.$wrapper.append(this.$img),this.options.backgroundcolor&&this.$wrapper.css("background-color",this.options.backgroundcolor),d.call(this,"on"),setTimeout(function(t){return function(){return c.call(t)}}(this),100)}var n,o,e,s,a,l,h,A,d,c,g;return i.dpr=1,g=function(){var t;return t=o.call(this),this.$clone.attr("width",t.width),this.$clone.attr("height",t.height)},A=function(){var i,n,o,e;o=this.$img.data(),e=[];for(i in o)r.call(o,i)&&(n=o[i],(null==n||0===i.indexOf("bttrlazyloading"))&&(i=i.replace("bttrlazyloading","").replace(/([a-z])([A-Z])/g,"$1-$2").toLowerCase().split("-"),i.length>1?"undefined"!=typeof this.options[i[0]][i[1]]?e.push(this.options[i[0]][i[1]]=n):e.push(void 0):"object"==typeof n?e.push(t.extend(this.options[i[0]],n)):"undefined"!=typeof this.options[i[0]]?e.push(this.options[i[0]]=n):e.push(void 0)));return e},d=function(i){var r,e,s,a;return s=function(t){return function(){return t.$clone.hide(),t.$img.show(),t.$wrapper.addClass("bttrlazyloading-loaded"),t.options.animation&&t.$img.addClass("animated "+t.options.animation),t.loaded=t.$img.attr("src"),t.$img.trigger("bttrlazyloading.afterLoad")}}(this),this.$img[i]("load",s),r=function(t){return function(){var i;return t.loading?void 0:(t.loading=!0,i=o.call(t),t.loaded?(t.$wrapper.removeClass("bttrlazyloading-loaded"),t.options.animation&&t.$img.removeClass("animated "+t.options.animation),t.$img.removeAttr("src"),t.$img.hide(),t.$clone.attr("width",i.width),t.$clone.attr("height",i.height),t.$clone.show()):t.$wrapper.css("background-image","url('"+t.options.placeholder+"')"),setTimeout(function(){return t.$img.trigger("bttrlazyloading.beforeLoad"),t.$img.data("bttrlazyloading.range",i.range),t.$img.attr("src",n.call(t,i.src,i.range)),t.loading=!1},t.options.delay))}}(this),this.$img[i]("bttrlazyloading.load",r),e=function(t){return function(){var i,n;if(n=t.$img.attr("src"),i=t.$img.data("bttrlazyloading.range"),t.constructor.dpr>=2&&t.options.retina&&n.match(/@2x/gi))t.blackList.push(i+"@2x");else if(t.blackList.push(i),t.whiteList.splice(t.whiteList.indexOf(i),1),0===t.whiteList.length)return t.$img.trigger("bttrlazyloading.error"),!1;return t.$img.trigger("bttrlazyloading.load")}}(this),this.$img[i]("error",e),a=function(t){return function(){return c.call(t)}}(this),this.$container[i](this.options.event,a),this.options.container!==window&&t(window)[i](this.options.event,a),t(window)[i]("resize",a)},a=function(){var t;return t=window.innerWidth,t<=this.ranges.xs?"xs":this.ranges.sm<=t&&t<this.ranges.md?"sm":this.ranges.md<=t&&t<this.ranges.lg?"md":this.ranges.lg<=t?"lg":void 0},o=function(){return this.range=a.call(this),s.call(this)},n=function(t,i){return this.constructor.dpr>=2&&this.options.retina&&-1===this.blackList.indexOf(i+"@2x")?t.replace(/\.\w+$/,function(t){return"@2x"+t}):t},e=function(t){return"undefined"!=typeof this.options[t].src&&null!==this.options[t].src?this.options[t]:null},s=function(){var t,i,n,r,o,s;if(t=this.whiteList.indexOf(this.range),t>-1&&(n=e.call(this,this.range)))return n.range=this.range,n;for(s=this.whiteList,t=r=0,o=s.length;o>r;t=++r)if(i=s[t],n=e.call(this,i))return n.range=i,n;return""},l=function(){var i,r,e;return!this.loaded&&this.options.triggermanually?!1:this.loaded&&this.options.updatemanually?!1:(i=o.call(this),i.src&&this.loaded!==n.call(this,i.src,i.range)?(e=0,this.loaded||(e=this.options.threshold),r=h.call(this,t(window),{top:t(window).scrollTop()+e,left:t(window).scrollLeft()}),this.options.container!==window?r&&h.call(this,this.$container,{top:this.$container.offset().top+e,left:this.$container.offset().left}):r):!1)},h=function(t,i){var n;return null==i&&(i={}),i.right=i.left+t.width(),i.bottom=i.top+t.height(),n=this.$wrapper.offset(),n.right=n.left+this.$wrapper.outerWidth(),n.bottom=n.top+this.$wrapper.outerHeight(),!(i.right<n.left||i.left>n.right||i.bottom<n.top||i.top>n.bottom)},c=function(){return this.range!==a.call(this)&&g.call(this),l.call(this)?this.$img.trigger("bttrlazyloading.load"):void 0},i.prototype.get$Img=function(){return this.$img},i.prototype.get$Clone=function(){return this.$clone},i.prototype.get$Wrapper=function(){return this.$wrapper},i.prototype.destroy=function(){return this.$wrapper.before(this.$img),this.$wrapper.remove(),d.call(this,"off"),this.$img.off("bttrlazyloading"),this.$wrapper.removeClass("bttrlazyloading-loaded"),this.options.animation&&this.$img.removeClass("animated "+this.options.animation),this.$img.removeData("bttrlazyloading"),this.$img},i}(),t.fn.extend({bttrlazyloading:function(n){return this.each(function(){var r,o;return r=t(this),o=r.data("bttrlazyloading"),"undefined"==typeof o&&(o=new i(this,n),r.data("bttrlazyloading",o)),"string"==typeof n&&"undefined"!=typeof o[n]?o[n].call(o):void 0})}}),t.fn.bttrlazyloading.Constructor=i,n=function(){function i(){}return i.prototype.version="1.0.8",i.ranges={xs:767,sm:768,md:992,lg:1200},i.options={xs:{src:null,width:100,height:100},sm:{src:null,width:100,height:100},md:{src:null,width:100,height:100},lg:{src:null,width:100,height:100},retina:!1,animation:"bounceIn",delay:0,event:"scroll",container:window,threshold:0,triggermanually:!1,updatemanually:!1,wrapperClasses:null,backgroundcolor:"#EEE",placeholder:"data:image/gif;base64,R0lGODlhEAALAPQAAP/391tbW+bf3+Da2vHq6l5dXVtbW3h2dq6qqpiVldLMzHBvb4qHh7Ovr5uYmNTOznNxcV1cXI2Kiu7n5+Xf3/fw8H58fOjh4fbv78/JycG8vNzW1vPs7AAAAAAAAAAAACH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCwAAACwAAAAAEAALAAAFLSAgjmRpnqSgCuLKAq5AEIM4zDVw03ve27ifDgfkEYe04kDIDC5zrtYKRa2WQgAh+QQJCwAAACwAAAAAEAALAAAFJGBhGAVgnqhpHIeRvsDawqns0qeN5+y967tYLyicBYE7EYkYAgAh+QQJCwAAACwAAAAAEAALAAAFNiAgjothLOOIJAkiGgxjpGKiKMkbz7SN6zIawJcDwIK9W/HISxGBzdHTuBNOmcJVCyoUlk7CEAAh+QQJCwAAACwAAAAAEAALAAAFNSAgjqQIRRFUAo3jNGIkSdHqPI8Tz3V55zuaDacDyIQ+YrBH+hWPzJFzOQQaeavWi7oqnVIhACH5BAkLAAAALAAAAAAQAAsAAAUyICCOZGme1rJY5kRRk7hI0mJSVUXJtF3iOl7tltsBZsNfUegjAY3I5sgFY55KqdX1GgIAIfkECQsAAAAsAAAAABAACwAABTcgII5kaZ4kcV2EqLJipmnZhWGXaOOitm2aXQ4g7P2Ct2ER4AMul00kj5g0Al8tADY2y6C+4FIIACH5BAkLAAAALAAAAAAQAAsAAAUvICCOZGme5ERRk6iy7qpyHCVStA3gNa/7txxwlwv2isSacYUc+l4tADQGQ1mvpBAAIfkECQsAAAAsAAAAABAACwAABS8gII5kaZ7kRFGTqLLuqnIcJVK0DeA1r/u3HHCXC/aKxJpxhRz6Xi0ANAZDWa+kEAA7AAAAAAAAAAAA"},i.prototype.setOptions=function(i){return null==i&&(i={}),t.extend(!0,this.constructor.options,i),this},i.prototype.setRanges=function(i){return null==i&&(i={}),t.extend(!0,this.constructor.ranges,i),this},i}(),t.bttrlazyloading=new n}).call(this);;/* ========================================================================
+(function(){"use strict";var t,i,n,r={}.hasOwnProperty;t=jQuery,i=function(){function i(i,n){var r;null==n&&(n={}),this.$img=t(i),this.loaded=!1,this.loading=!1,r=t.extend(!0,{},t.bttrlazyloading.constructor.options),this.options=t.extend(!0,r,n),this.ranges=t.bttrlazyloading.constructor.ranges,this.$container=t(this.options.container),"number"==typeof window.devicePixelRatio&&(this.constructor.dpr=window.devicePixelRatio),this.whiteList=["lg","md","sm","xs"],this.blackList=[],A.call(this),this.$wrapper=t('<span class="bttrlazyloading-wrapper"></span>'),this.options.wrapperClasses&&"string"==typeof this.options.wrapperClasses&&this.$wrapper.addClass(this.options.wrapperClasses),this.$img.before(this.$wrapper),this.$clone=t('<canvas class="bttrlazyloading-clone"></canvas>'),g.call(this),this.$wrapper.append(this.$clone),this.$img.hide(),this.$wrapper.append(this.$img),this.options.backgroundcolor&&this.$wrapper.css("background-color",this.options.backgroundcolor),d.call(this,"on"),setTimeout(function(t){return function(){return c.call(t)}}(this),100)}var n,o,e,s,a,l,h,A,d,c,g;return i.dpr=1,g=function(){var t;return t=o.call(this),this.$clone.attr("width",t.width),this.$clone.attr("height",t.height)},A=function(){var i,n,o,e;o=this.$img.data(),e=[];for(i in o)r.call(o,i)&&(n=o[i],(null==n||0===i.indexOf("bttrlazyloading"))&&(i=i.replace("bttrlazyloading","").replace(/([a-z])([A-Z])/g,"$1-$2").toLowerCase().split("-"),i.length>1?"undefined"!=typeof this.options[i[0]][i[1]]?e.push(this.options[i[0]][i[1]]=n):e.push(void 0):"object"==typeof n?e.push(t.extend(this.options[i[0]],n)):"undefined"!=typeof this.options[i[0]]?e.push(this.options[i[0]]=n):e.push(void 0)));return e},d=function(i){var r,e,s,a;return s=function(t){return function(){return t.$clone.hide(),t.$img.show(),t.$wrapper.addClass("bttrlazyloading-loaded"),t.options.animation&&t.$img.addClass("animated "+t.options.animation),t.loaded=t.$img.attr("src"),t.$img.trigger("bttrlazyloading.afterLoad")}}(this),this.$img[i]("load",s),r=function(t){return function(){var i;return t.loading?void 0:(t.loading=!0,i=o.call(t),t.loaded?(t.$wrapper.removeClass("bttrlazyloading-loaded"),t.options.animation&&t.$img.removeClass("animated "+t.options.animation),t.$img.removeAttr("src"),t.$img.hide(),t.$clone.attr("width",i.width),t.$clone.attr("height",i.height),t.$clone.show()):t.$wrapper.css("background-image","url('"+t.options.placeholder+"')"),setTimeout(function(){return t.$img.trigger("bttrlazyloading.beforeLoad"),t.$img.data("bttrlazyloading.range",i.range),t.$img.attr("src",n.call(t,i.src,i.range)),t.loading=!1},t.options.delay))}}(this),this.$img[i]("bttrlazyloading.load",r),e=function(t){return function(){var i,n;if(n=t.$img.attr("src"),i=t.$img.data("bttrlazyloading.range"),t.constructor.dpr>=2&&t.options.retina&&n.match(/@2x/gi))t.blackList.push(i+"@2x");else if(t.blackList.push(i),t.whiteList.splice(t.whiteList.indexOf(i),1),0===t.whiteList.length)return t.$img.trigger("bttrlazyloading.error"),!1;return t.$img.trigger("bttrlazyloading.load")}}(this),this.$img[i]("error",e),a=function(t){return function(){return c.call(t)}}(this),this.$container[i](this.options.event,a),this.options.container!==window&&t(window)[i](this.options.event,a),t(window)[i]("resize",a)},a=function(){var t;return t=window.innerWidth,t<=this.ranges.xs?"xs":this.ranges.sm<=t&&t<this.ranges.md?"sm":this.ranges.md<=t&&t<this.ranges.lg?"md":this.ranges.lg<=t?"lg":void 0},o=function(){return this.range=a.call(this),s.call(this)},n=function(t,i){return this.constructor.dpr>=2&&this.options.retina&&-1===this.blackList.indexOf(i+"@2x")?t.replace(/\.\w+$/,function(t){return"@2x"+t}):t},e=function(t){return"undefined"!=typeof this.options[t].src&&null!==this.options[t].src?this.options[t]:null},s=function(){var t,i,n,r,o,s;if(t=this.whiteList.indexOf(this.range),t>-1&&(n=e.call(this,this.range)))return n.range=this.range,n;for(s=this.whiteList,t=r=0,o=s.length;o>r;t=++r)if(i=s[t],n=e.call(this,i))return n.range=i,n;return""},l=function(){var i,r,e;return!this.loaded&&this.options.triggermanually?!1:this.loaded&&this.options.updatemanually?!1:(i=o.call(this),i.src&&this.loaded!==n.call(this,i.src,i.range)?(e=0,this.loaded||(e=this.options.threshold),r=h.call(this,t(window),{top:t(window).scrollTop()+e,left:t(window).scrollLeft()}),this.options.container!==window?r&&h.call(this,this.$container,{top:this.$container.offset().top+e,left:this.$container.offset().left}):r):!1)},h=function(t,i){var n;return null==i&&(i={}),i.right=i.left+t.width(),i.bottom=i.top+t.height(),n=this.$wrapper.offset(),n.right=n.left+this.$wrapper.outerWidth(),n.bottom=n.top+this.$wrapper.outerHeight(),!(i.right<n.left||i.left>n.right||i.bottom<n.top||i.top>n.bottom)},c=function(){return this.range!==a.call(this)&&g.call(this),l.call(this)?this.$img.trigger("bttrlazyloading.load"):void 0},i.prototype.get$Img=function(){return this.$img},i.prototype.get$Clone=function(){return this.$clone},i.prototype.get$Wrapper=function(){return this.$wrapper},i.prototype.destroy=function(){return this.$wrapper.before(this.$img),this.$wrapper.remove(),d.call(this,"off"),this.$img.off("bttrlazyloading"),this.$wrapper.removeClass("bttrlazyloading-loaded"),this.options.animation&&this.$img.removeClass("animated "+this.options.animation),this.$img.removeData("bttrlazyloading"),this.$img},i}(),t.fn.extend({bttrlazyloading:function(n){return this.each(function(){var r,o;return r=t(this),o=r.data("bttrlazyloading"),"undefined"==typeof o&&(o=new i(this,n),r.data("bttrlazyloading",o)),"string"==typeof n&&"undefined"!=typeof o[n]?o[n].call(o):void 0})}}),t.fn.bttrlazyloading.Constructor=i,n=function(){function i(){}return i.prototype.version="1.0.8",i.ranges={xs:767,sm:768,md:992,lg:1200},i.options={xs:{src:null,width:100,height:100},sm:{src:null,width:100,height:100},md:{src:null,width:100,height:100},lg:{src:null,width:100,height:100},retina:!1,animation:"bounceIn",delay:0,event:"scroll",container:window,threshold:0,triggermanually:!1,updatemanually:!1,wrapperClasses:null,backgroundcolor:"#EEE",placeholder:"data:image/gif;base64,R0lGODlhEAALAPQAAP/391tbW+bf3+Da2vHq6l5dXVtbW3h2dq6qqpiVldLMzHBvb4qHh7Ovr5uYmNTOznNxcV1cXI2Kiu7n5+Xf3/fw8H58fOjh4fbv78/JycG8vNzW1vPs7AAAAAAAAAAAACH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCwAAACwAAAAAEAALAAAFLSAgjmRpnqSgCuLKAq5AEIM4zDVw03ve27ifDgfkEYe04kDIDC5zrtYKRa2WQgAh+QQJCwAAACwAAAAAEAALAAAFJGBhGAVgnqhpHIeRvsDawqns0qeN5+y967tYLyicBYE7EYkYAgAh+QQJCwAAACwAAAAAEAALAAAFNiAgjothLOOIJAkiGgxjpGKiKMkbz7SN6zIawJcDwIK9W/HISxGBzdHTuBNOmcJVCyoUlk7CEAAh+QQJCwAAACwAAAAAEAALAAAFNSAgjqQIRRFUAo3jNGIkSdHqPI8Tz3V55zuaDacDyIQ+YrBH+hWPzJFzOQQaeavWi7oqnVIhACH5BAkLAAAALAAAAAAQAAsAAAUyICCOZGme1rJY5kRRk7hI0mJSVUXJtF3iOl7tltsBZsNfUegjAY3I5sgFY55KqdX1GgIAIfkECQsAAAAsAAAAABAACwAABTcgII5kaZ4kcV2EqLJipmnZhWGXaOOitm2aXQ4g7P2Ct2ER4AMul00kj5g0Al8tADY2y6C+4FIIACH5BAkLAAAALAAAAAAQAAsAAAUvICCOZGme5ERRk6iy7qpyHCVStA3gNa/7txxwlwv2isSacYUc+l4tADQGQ1mvpBAAIfkECQsAAAAsAAAAABAACwAABS8gII5kaZ7kRFGTqLLuqnIcJVK0DeA1r/u3HHCXC/aKxJpxhRz6Xi0ANAZDWa+kEAA7AAAAAAAAAAAA"},i.prototype.setOptions=function(i){return null==i&&(i={}),t.extend(!0,this.constructor.options,i),this},i.prototype.setRanges=function(i){return null==i&&(i={}),t.extend(!0,this.constructor.ranges,i),this},i}(),t.bttrlazyloading=new n}).call(this);;/*!
+ * jQuery.localScroll
+ * Copyright (c) 2007-2014 Ariel Flesler - aflesler<a>gmail<d>com | http://flesler.blogspot.com
+ * Licensed under MIT
+ * http://flesler.blogspot.com/2007/10/jquerylocalscroll-10.html
+ * @author Ariel Flesler
+ * @version 1.3.5
+ */
+ ;(function(plugin) {
+    // AMD Support
+    if (typeof define === 'function' && define.amd) {
+        define(['jquery'], plugin);
+    } else {
+        plugin(jQuery);
+    }
+}(function($) {
+	var URI = location.href.replace(/#.*/, ''); // local url without hash
+
+	var $localScroll = $.localScroll = function(settings) {
+		$('body').localScroll(settings);
+	};
+
+	// Many of these defaults, belong to jQuery.ScrollTo, check it's demo for an example of each option.
+	// @see http://demos.flesler.com/jquery/scrollTo/
+	// The defaults are public and can be overriden.
+	$localScroll.defaults = {
+		duration: 1000, // How long to animate.
+		axis: 'y', // Which of top and left should be modified.
+		event: 'click', // On which event to react.
+		stop: true, // Avoid queuing animations 
+		target: window // What to scroll (selector or element). The whole window by default.
+		/*
+		lock: false, // ignore events if already animating
+		lazy: false, // if true, links can be added later, and will still work.
+		filter: null, // filter some anchors out of the matched elements.
+		hash: false // if true, the hash of the selected link, will appear on the address bar.
+		*/
+	};
+
+	$.fn.localScroll = function(settings) {
+		settings = $.extend({}, $localScroll.defaults, settings);
+
+		if (settings.hash && location.hash) {
+			if (settings.target) window.scrollTo(0, 0);
+			scroll(0, location, settings);
+		}
+
+		return settings.lazy ?
+			// use event delegation, more links can be added later.		
+			this.on(settings.event, 'a,area', function(e) {
+				if (filter.call(this)) {
+					scroll(e, this, settings); 
+				}
+			}) :
+			// bind concretely, to each matching link
+			this.find('a,area')
+				.filter(filter).bind(settings.event, function(e) {
+					scroll(e, this, settings);
+				}).end()
+			.end();
+
+		function filter() {// is this a link that points to an anchor and passes a possible filter ? href is checked to avoid a bug in FF.
+			return !!this.href && !!this.hash && this.href.replace(this.hash,'') == URI && (!settings.filter || $(this).is(settings.filter));
+		};
+	};
+
+	// Not needed anymore, kept for backwards compatibility
+	$localScroll.hash = function() {};
+
+	function scroll(e, link, settings) {
+		var id = link.hash.slice(1),
+			elem = document.getElementById(id) || document.getElementsByName(id)[0];
+
+		if (!elem)
+			return;
+
+		if (e)
+			e.preventDefault();
+
+		var $target = $(settings.target);
+
+		if (settings.lock && $target.is(':animated') ||
+			settings.onBefore && settings.onBefore(e, elem, $target) === false) 
+			return;
+
+		if (settings.stop)
+			$target._scrollable().stop(true); // remove all its animations
+
+		if (settings.hash) {
+			var attr = elem.id === id ? 'id' : 'name',
+				$a = $('<a> </a>').attr(attr, id).css({
+					position:'absolute',
+					top: $(window).scrollTop(),
+					left: $(window).scrollLeft()
+				});
+
+			elem[attr] = '';
+			$('body').prepend($a);
+			location.hash = link.hash;
+			$a.remove();
+			elem[attr] = id;
+		}
+			
+		$target
+			.scrollTo(elem, settings) // do scroll
+			.trigger('notify.serialScroll',[elem]); // notify serialScroll about this change
+	};
+
+	// AMD requirement
+	return $localScroll;
+
+}));;/*!
+ * jQuery.ScrollTo
+ * Copyright (c) 2007-2014 Ariel Flesler - aflesler<a>gmail<d>com | http://flesler.blogspot.com
+ * Licensed under MIT
+ * http://flesler.blogspot.com/2007/10/jqueryscrollto.html
+ * @projectDescription Easy element scrolling using jQuery.
+ * @author Ariel Flesler
+ * @version 1.4.12
+ */
+
+;(function(plugin) {
+    // AMD Support
+    if (typeof define === 'function' && define.amd) {
+        define(['jquery'], plugin);
+    } else {
+        plugin(jQuery);
+    }
+}(function($) {
+
+	var $scrollTo = $.scrollTo = function( target, duration, settings ) {
+		return $(window).scrollTo( target, duration, settings );
+	};
+
+	$scrollTo.defaults = {
+		axis:'xy',
+		duration: parseFloat($.fn.jquery) >= 1.3 ? 0 : 1,
+		limit:true
+	};
+
+	// Returns the element that needs to be animated to scroll the window.
+	// Kept for backwards compatibility (specially for localScroll & serialScroll)
+	$scrollTo.window = function( scope ) {
+		return $(window)._scrollable();
+	};
+
+	// Hack, hack, hack :)
+	// Returns the real elements to scroll (supports window/iframes, documents and regular nodes)
+	$.fn._scrollable = function() {
+		return this.map(function() {
+			var elem = this,
+				isWin = !elem.nodeName || $.inArray( elem.nodeName.toLowerCase(), ['iframe','#document','html','body'] ) != -1;
+
+				if (!isWin)
+					return elem;
+
+			var doc = (elem.contentWindow || elem).document || elem.ownerDocument || elem;
+
+			return /webkit/i.test(navigator.userAgent) || doc.compatMode == 'BackCompat' ?
+				doc.body :
+				doc.documentElement;
+		});
+	};
+
+	$.fn.scrollTo = function( target, duration, settings ) {
+		if (typeof duration == 'object') {
+			settings = duration;
+			duration = 0;
+		}
+		if (typeof settings == 'function')
+			settings = { onAfter:settings };
+
+		if (target == 'max')
+			target = 9e9;
+
+		settings = $.extend( {}, $scrollTo.defaults, settings );
+		// Speed is still recognized for backwards compatibility
+		duration = duration || settings.duration;
+		// Make sure the settings are given right
+		settings.queue = settings.queue && settings.axis.length > 1;
+
+		if (settings.queue)
+			// Let's keep the overall duration
+			duration /= 2;
+		settings.offset = both( settings.offset );
+		settings.over = both( settings.over );
+
+		return this._scrollable().each(function() {
+			// Null target yields nothing, just like jQuery does
+			if (target == null) return;
+
+			var elem = this,
+				$elem = $(elem),
+				targ = target, toff, attr = {},
+				win = $elem.is('html,body');
+
+			switch (typeof targ) {
+				// A number will pass the regex
+				case 'number':
+				case 'string':
+					if (/^([+-]=?)?\d+(\.\d+)?(px|%)?$/.test(targ)) {
+						targ = both( targ );
+						// We are done
+						break;
+					}
+					// Relative/Absolute selector, no break!
+					targ = win ? $(targ) : $(targ, this);
+					if (!targ.length) return;
+				case 'object':
+					// DOMElement / jQuery
+					if (targ.is || targ.style)
+						// Get the real position of the target
+						toff = (targ = $(targ)).offset();
+			}
+			
+			var offset = $.isFunction(settings.offset) && settings.offset(elem, targ) || settings.offset;
+			
+			$.each( settings.axis.split(''), function( i, axis ) {
+				var Pos	= axis == 'x' ? 'Left' : 'Top',
+					pos = Pos.toLowerCase(),
+					key = 'scroll' + Pos,
+					old = elem[key],
+					max = $scrollTo.max(elem, axis);
+
+				if (toff) {// jQuery / DOMElement
+					attr[key] = toff[pos] + ( win ? 0 : old - $elem.offset()[pos] );
+
+					// If it's a dom element, reduce the margin
+					if (settings.margin) {
+						attr[key] -= parseInt(targ.css('margin'+Pos)) || 0;
+						attr[key] -= parseInt(targ.css('border'+Pos+'Width')) || 0;
+					}
+
+					attr[key] += offset[pos] || 0;
+
+					if(settings.over[pos])
+						// Scroll to a fraction of its width/height
+						attr[key] += targ[axis=='x'?'width':'height']() * settings.over[pos];
+				} else {
+					var val = targ[pos];
+					// Handle percentage values
+					attr[key] = val.slice && val.slice(-1) == '%' ?
+						parseFloat(val) / 100 * max
+						: val;
+				}
+
+				// Number or 'number'
+				if (settings.limit && /^\d+$/.test(attr[key]))
+					// Check the limits
+					attr[key] = attr[key] <= 0 ? 0 : Math.min( attr[key], max );
+
+				// Queueing axes
+				if (!i && settings.queue) {
+					// Don't waste time animating, if there's no need.
+					if (old != attr[key])
+						// Intermediate animation
+						animate( settings.onAfterFirst );
+					// Don't animate this axis again in the next iteration.
+					delete attr[key];
+				}
+			});
+
+			animate( settings.onAfter );
+
+			function animate( callback ) {
+				$elem.animate( attr, duration, settings.easing, callback && function() {
+					callback.call(this, targ, settings);
+				});
+			};
+
+		}).end();
+	};
+
+	// Max scrolling position, works on quirks mode
+	// It only fails (not too badly) on IE, quirks mode.
+	$scrollTo.max = function( elem, axis ) {
+		var Dim = axis == 'x' ? 'Width' : 'Height',
+			scroll = 'scroll'+Dim;
+
+		if (!$(elem).is('html,body'))
+			return elem[scroll] - $(elem)[Dim.toLowerCase()]();
+
+		var size = 'client' + Dim,
+			html = elem.ownerDocument.documentElement,
+			body = elem.ownerDocument.body;
+
+		return Math.max( html[scroll], body[scroll] )
+			 - Math.min( html[size]  , body[size]   );
+	};
+
+	function both( val ) {
+		return $.isFunction(val) || typeof val == 'object' ? val : { top:val, left:val };
+	};
+
+    // AMD requirement
+    return $scrollTo;
+}));
+;/* ========================================================================
  * DOM-based Routing
  * Based on http://goo.gl/EUTi53 by Paul Irish
  *
@@ -2128,6 +2425,10 @@ var Roots = {
   common: {
     init: function() {
       // JavaScript to be fired on all pages
+      $(document).ready(function(){
+			//$('.project-img').bttrlazyloading();
+			$().localScroll({hash:true});
+		});
     }
   },
   // Home page
@@ -2140,9 +2441,6 @@ var Roots = {
   projects: {
     init: function() {
       // JavaScript to be fired on the about us page
-      	$(document).ready(function(){
-			$('.project-img').bttrlazyloading();
-		});
     }
   }
 };
@@ -2279,12 +2577,12 @@ $(document).ready(function($){
 $(document).ready(UTIL.loadEvents);
 	
 $(document).ready(function(){
-	$('#mainImg1').bttrlazyloading();
-	$('#mainImg2').bttrlazyloading();
+	//$('#mainImg1').bttrlazyloading();
+	/*$('#mainImg2').bttrlazyloading();
 	$('#mainImg3').bttrlazyloading();
 	$('#mainImg4').bttrlazyloading();
 	$('#mainImg5').bttrlazyloading();
-	$('#mainImg6').bttrlazyloading();
+	$('#mainImg6').bttrlazyloading();*/
 });
 
 })(jQuery); // Fully reference jQuery after this point.
