@@ -2570,21 +2570,16 @@ $(document).ready(function($){
 		);
 	});
 	
+});
+
+$(window).load(function(){
 	itemHeightSync();
-	
+	magicLine();	
 	
 	$( window ).resize(function() {
 	  itemHeightSync();
 	  magicLine();
 	});
-	
-	$(window).scroll(function() {
-	  //itemHeightSync();	
-	});
-});
-
-$(window).load(function(){
-	magicLine();	
 });
 
 $(document).ready(UTIL.loadEvents);
