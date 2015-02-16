@@ -23,12 +23,13 @@
 	</div>
 </section>
 <section class="full-width-container heightSync">
-  <img id="mainImg2" class="bg" 
+ <!-- <img id="mainImg2" class="bg" 
   	data-bttrlazyloading-animation="fadeIn"
   	data-bttrlazyloading-xs-src="<?=get_stylesheet_directory_uri()?>/assets/img/about/about-img-2.jpg" 
   	data-bttrlazyloading-sm-src="<?=get_stylesheet_directory_uri()?>/assets/img/about/about-img-2.jpg"
     data-bttrlazyloading-md-src="<?=get_stylesheet_directory_uri()?>/assets/img/about/about-img-2.jpg"
-    data-bttrlazyloading-lg-src="<?=get_stylesheet_directory_uri()?>/assets/img/about/about-img-2.jpg" />
+    data-bttrlazyloading-lg-src="<?=get_stylesheet_directory_uri()?>/assets/img/about/about-img-2.jpg" />-->
+     <img class="bg" src="<?=get_stylesheet_directory_uri()?>/assets/img/about/about-img-2.jpg" />
   <div class="overlayContent fullOverlay heightReference">
 	<h2>ABOUT HALODOME</h2>  
     <div class="col-sm-10 col-lg-8 aboutParagraph">

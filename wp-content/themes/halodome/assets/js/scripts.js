@@ -2221,6 +2221,7 @@ function itemHeightSync(){
 	$('.heightReference').css({'height':''});
 	if(windowWidth > 740){
 		//var maxHeight = Math.max.apply(null, elementHeights);
+		console.log('heightReference: '+$('.heightReference').outerHeight()+' heightSync:'+$('.heightSync').outerHeight()+'img: '+$('.heightSync .bttrlazyloading-wrapper img').height());
 		if($('.heightReference').outerHeight() > $('.heightSync').outerHeight()){
 			$('.heightSync .bttrlazyloading-wrapper').height( $('.heightReference').outerHeight() );
 			$('.heightSync').height( $('.heightReference').outerHeight() );
