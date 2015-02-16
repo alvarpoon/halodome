@@ -6988,9 +6988,11 @@ img.bg {
     font-size: 13px;
   }
   .navbar-default .navbar-nav {
-    position: absolute;
-    bottom: 0;
-    right: 0;
+    /*position:absolute;
+			bottom:0;
+			right:0;*/
+    float: right;
+    margin-top: 70px;
   }
   .navbar-default .navbar-nav #magic-line {
     display: block;

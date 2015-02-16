@@ -71,18 +71,26 @@ function magicLine(){
 	}
 	var $magicLine = $("#magic-line");
 	
+	var lineOffset = $(".active").offset();
+	var mainNavOffset = $mainNav.parent().offset();
+	
+	console.log('lineOffset left:'+lineOffset.left+'mainNavOffset left:'+mainNavOffset.left);
+	
 	$magicLine
+		.width($(".active").width())
+		.css("left", lineOffset.left-mainNavOffset.left-30)
+		.data("origLeft", $magicLine.position().left)
+		.data("origWidth", $magicLine.width());
+	
+	/*$magicLine
 		.width($(".active").width())
 		.css("left", $(".active a").parent().position().left)
 		.data("origLeft", $magicLine.position().left)
-		.data("origWidth", $magicLine.width());
+		.data("origWidth", $magicLine.width());*/
 			
 	$("#menu-main > li a").not('ul li ul a').hover(
 		function() {
-			/*if($(this).parent().find('ul').hasClass('sub-menu')){
-				console.log(1);
-				return;	
-			}*/
+
 			$el = $(this);
 			leftPos = $el.parent().position().left;
 			//console.log(leftPos);
@@ -117,7 +125,7 @@ function itemHeightSync(){
 	$('.heightReference').css({'height':''});
 	if(windowWidth > 740){
 		//var maxHeight = Math.max.apply(null, elementHeights);
-		console.log('heightReference: '+$('.heightReference').outerHeight()+' heightSync:'+$('.heightSync').outerHeight()+'img: '+$('.heightSync .bttrlazyloading-wrapper img').height());
+		//console.log('heightReference: '+$('.heightReference').outerHeight()+' heightSync:'+$('.heightSync').outerHeight()+'img: '+$('.heightSync .bttrlazyloading-wrapper img').height());
 		if($('.heightReference').outerHeight() > $('.heightSync').outerHeight()){
 			$('.heightSync .bttrlazyloading-wrapper').height( $('.heightReference').outerHeight() );
 			$('.heightSync').height( $('.heightReference').outerHeight() );
@@ -161,7 +169,7 @@ $(document).ready(function($){
 	});
 	
 	itemHeightSync();
-	magicLine();
+	
 	
 	$( window ).resize(function() {
 	  itemHeightSync();
@@ -171,6 +179,10 @@ $(document).ready(function($){
 	$(window).scroll(function() {
 	  //itemHeightSync();	
 	});
+});
+
+$(window).load(function(){
+	magicLine();	
 });
 
 $(document).ready(UTIL.loadEvents);
