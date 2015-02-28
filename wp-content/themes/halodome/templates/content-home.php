@@ -52,7 +52,7 @@
   	data-bttrlazyloading-sm-src="<?=get_stylesheet_directory_uri()?>/assets/img/main-img-4.jpg"
     data-bttrlazyloading-md-src="<?=get_stylesheet_directory_uri()?>/assets/img/main-img-4.jpg"
     data-bttrlazyloading-lg-src="<?=get_stylesheet_directory_uri()?>/assets/img/main-img-4.jpg" /> -->
-  <div class="overlayContent" style="background:url(<?=get_stylesheet_directory_uri()?>/assets/img/bg_alpha.png) repeat;">
+  <div class="overlayContent">
 	  <div class="numberDataContainer">
 	  	<h2>Numbers in Halodome</h2>
 		<div class="clearfix">

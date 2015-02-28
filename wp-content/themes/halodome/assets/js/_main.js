@@ -76,11 +76,19 @@ function magicLine(){
 	
 	console.log('lineOffset left:'+lineOffset.left+'mainNavOffset left:'+mainNavOffset.left);
 	
-	$magicLine
-		.width($(".active").width())
-		.css("left", lineOffset.left-mainNavOffset.left-30)
-		.data("origLeft", $magicLine.position().left)
-		.data("origWidth", $magicLine.width());
+	if(checkWindowWidth() > 991){
+		$magicLine
+			.width($(".active").width())
+			.css("left", lineOffset.left-mainNavOffset.left-30)
+			.data("origLeft", $magicLine.position().left)
+			.data("origWidth", $magicLine.width());
+	}else{
+		$magicLine
+			.width($(".active").width())
+			.css("left", lineOffset.left-mainNavOffset.left-20)
+			.data("origLeft", $magicLine.position().left)
+			.data("origWidth", $magicLine.width());
+	}
 	
 	/*$magicLine
 		.width($(".active").width())
