@@ -18,14 +18,14 @@
 		<h3>Spectacular Space</h3>
 	  </div>
 	  <div class="image-caption">
-		<p>Built to German Passivehaus specification, the highest standard in the world for energy consumption, the concept uses eighty fully prefabricated and sustainably sourced timber panels bolted together to form a single dome space 13 meters x 6.5 meters high.</p>
+		<p>Built to German Passivehaus specification, the highest standard in the world for energy consumption, the concept uses eighty fully prefabricated and sustainably sourced timber panels bolted together to form a single dome space 13 meters x 6.5 meters high.</p>
 	  </div>
 	</div>
 </section>
 <section class="full-width-container heightSync">
   <img id="mainImg2" class="bg" src="<?=get_stylesheet_directory_uri()?>/assets/img/about/about-img-2.jpg" />
   <div class="overlayContent fullOverlay heightReference">
-	<h2>ABOUT HALODOME</h2>  
+	<h2 class="lowerTitle">ABOUT HALODOME</h2>  
     <div class="col-sm-10 col-lg-8 aboutParagraph">
     	<p>Halodome is a pre-fabricated timber building designed to ship anywhere in the world for a multitude of uses “a house, a studio, a showroom a workshop, whatever you want” as founder Tim Oulton says.</p>
         <p>The design uses a high level of airtightness and insulation to achieve ultra low energy consumption. Triple-glazed doors and windows, of the highest available European quality, are preinstalled into the finished panels and can be positioned in various configurations to suit the location and orientation of the building. A highly efficient ventilation and energy recovery system constantly replenishes fresh air ensuring the temperature inside remains constant and comfortable all year round.</p>

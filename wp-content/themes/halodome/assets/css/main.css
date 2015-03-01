@@ -6658,6 +6658,7 @@ p {
 .full-width-container .fullOverlay .aboutParagraph p {
   margin: 0!important;
   padding-bottom: 10px!important;
+  font-weight: 300;
 }
 .full-width-container .fullOverlay .aboutList {
   margin: 5% auto 0 auto;
@@ -6667,6 +6668,7 @@ p {
 .full-width-container .fullOverlay .aboutList .title {
   font-weight: bold;
   padding-bottom: 10px;
+  letter-spacing: 1px;
 }
 .full-width-container .fullOverlay .aboutList ul {
   padding-left: 15px;
@@ -6675,6 +6677,7 @@ p {
 }
 .full-width-container .fullOverlay .aboutList ul li {
   font-weight: 300;
+  letter-spacing: 1px;
 }
 .full-width-container .fullOverlay .contactContainer {
   margin: 0 auto;
@@ -6697,6 +6700,7 @@ p {
   border-left: 1px solid #fff;
   padding-left: 20px;
   margin-bottom: 20px;
+  letter-spacing: 1px;
 }
 .full-width-container .fullOverlay .contactContainer .contactInfo div a {
   color: #fff;
@@ -6760,6 +6764,9 @@ img.bg {
     width: 100%;
     height: auto;
     min-height: 100%;
+  }
+  .full-width-container .overlayContent h2.lowerTitle {
+    margin-top: 35px;
   }
   .full-width-container .image-caption {
     background: url(../img/bg_alpha.png) repeat;
@@ -6882,6 +6889,9 @@ img.bg {
   }
   .full-width-container .image-caption {
     padding: 10px 22%;
+  }
+  .full-width-container .overlayContent h2.lowerTitle {
+    margin-top: 60px;
   }
 }
 @media (min-width: 1280px) {
@@ -7091,6 +7101,7 @@ img.bg {
   color: #fff;
   background: #000;
   font-size: 11px;
+  font-weight: 300;
 }
 @media (min-width: 768px) {
   .copyright {

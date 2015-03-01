@@ -54,7 +54,7 @@
     data-bttrlazyloading-lg-src="<?=get_stylesheet_directory_uri()?>/assets/img/main-img-4.jpg" /> -->
   <div class="overlayContent">
 	  <div class="numberDataContainer">
-	  	<h2>Numbers in Halodome</h2>
+	  	<h2 class="lowerTitle">Numbers in Halodome</h2>
 		<div class="clearfix">
 			<div class="numberData">
 				<span>70</span>
