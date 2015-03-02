@@ -20,15 +20,19 @@
 		<h1>HALODOME</h1>
 		<h3>Spectacular Space</h3>
 	  </div>
+      <div class="image-caption contactContainer">
+		<div class="contactInfo">
+        	<span class="title">Halodome Ltd</span>
+            <span>17/F  2 Heung Yip Street</span>
+            <span>Wong Chuk Hang  Hong Kong</span>
+            <span>E. <a href="mailto:info@halodome.net">info@halodome.net</a></span>
+            <span><a href="http://www.halodome.net">www.halodome.net</a></span>
+        </div>
+	  </div>
   </div>
 </section>
-<section class="full-width-container half-height">
+<!--<section class="full-width-container half-height">
   <img id="mainImg2" class="bg" src="<?=get_stylesheet_directory_uri()?>/assets/img/contact/contact-img-2.jpg" />
-  	<!-- data-bttrlazyloading-animation="fadeIn"
-  	data-bttrlazyloading-xs-src="<?=get_stylesheet_directory_uri()?>/assets/img/contact/contact-img-2.jpg" 
-  	data-bttrlazyloading-sm-src="<?=get_stylesheet_directory_uri()?>/assets/img/contact/contact-img-2.jpg"
-    data-bttrlazyloading-md-src="<?=get_stylesheet_directory_uri()?>/assets/img/contact/contact-img-2.jpg"
-    data-bttrlazyloading-lg-src="<?=get_stylesheet_directory_uri()?>/assets/img/contact/contact-img-2.jpg" /> -->
   <div class="overlayContent fullOverlay">
 	<div class="col-sm-8 col-md-9 contactContainer clearfix">
     	<div class="title">
@@ -50,4 +54,4 @@
         </div>
     </div>
   </div>
-</section>
+</section>-->

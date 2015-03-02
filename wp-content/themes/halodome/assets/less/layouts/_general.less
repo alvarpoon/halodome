@@ -142,35 +142,32 @@ p{
 				}
 			}
 		}
-		.contactContainer{
-			margin:0 auto;
-			float:none;
-			text-align:left;
+	}
+	.contactContainer{
+		margin:0 auto;
+		padding-top:20px!important;
+		padding-bottom:15px!important;
+		float:none;
+		text-align:left;
+		.contactInfo{
+			font-size:15px;
+			line-height: 160%;
+			text-align:center;
+			letter-spacing:1px;
 			.title{
-				text-transform:uppercase;
-				letter-spacing:3px;
-				font-size:30px;
-				font-weight:300;
-				margin-bottom:20px;
-			}
-			.contactInfo{
-				font-size: 18px;
-				line-height: 160%;
-				padding-right: 30px;
-				div{
-					border-left:1px solid #fff;
-					padding-left:20px;
-					margin-bottom:20px;
-					letter-spacing: 1px;
-					
-					a{
-						color:#fff;
-					}
+					font-weight:bold; 
 				}
+			span{
+				display:block;
+				padding-bottom:3px;
+			}
+			a{
+				color:#fff;
 			}
 		}
 	}
 }
+
 
 .heightSync{
 	background:#000;
@@ -195,6 +192,12 @@ img.bg {
 	}
 	img{
 		margin:0 auto;
+	}
+}
+
+.page-template-template-contact{
+	.main{
+		min-height:inherit!important;
 	}
 }
 
@@ -329,6 +332,20 @@ img.bg {
 				}
 			}
 		}
+		
+		.contactContainer{
+			/*.title{
+				float:left;
+				margin-bottom:0;
+			}
+			.contactInfo{
+				float:right;
+				padding-right: 30px;
+			}*/
+			.contactInfo{
+				font-size:15px;
+			}
+		}
 	}
 	
 	#halodome-floorplan{
@@ -340,16 +357,7 @@ img.bg {
 		}
 	}
 	
-	.contactContainer{
-		.title{
-			float:left;
-			margin-bottom:0;
-		}
-		.contactInfo{
-			float:right;
-			padding-right: 30px;
-		}
-	}
+	
 	
 }
 
@@ -387,6 +395,23 @@ img.bg {
 		.overlayContent{
 			h2.lowerTitle{
 				margin-top: 60px;
+			}
+		}
+		
+		.contactContainer{
+			/*.title{
+				float:left;
+				margin-bottom:0;
+			}
+			.contactInfo{
+				float:right;
+				padding-right: 30px;
+			}*/
+			.contactInfo{
+				font-size:20px;
+				span{
+					padding-bottom:5px;
+				}
 			}
 		}
 	}

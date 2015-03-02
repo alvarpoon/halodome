@@ -6462,6 +6462,7 @@ html,
 body {
   height: 100%;
   font-family: 'Open Sans', sans-serif;
+  background-color: #000;
 }
 .cd-top {
   display: inline-block;
@@ -6679,30 +6680,27 @@ p {
   font-weight: 300;
   letter-spacing: 1px;
 }
-.full-width-container .fullOverlay .contactContainer {
+.full-width-container .contactContainer {
   margin: 0 auto;
+  padding-top: 20px!important;
+  padding-bottom: 15px!important;
   float: none;
   text-align: left;
 }
-.full-width-container .fullOverlay .contactContainer .title {
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  font-size: 30px;
-  font-weight: 300;
-  margin-bottom: 20px;
-}
-.full-width-container .fullOverlay .contactContainer .contactInfo {
-  font-size: 18px;
+.full-width-container .contactContainer .contactInfo {
+  font-size: 15px;
   line-height: 160%;
-  padding-right: 30px;
-}
-.full-width-container .fullOverlay .contactContainer .contactInfo div {
-  border-left: 1px solid #fff;
-  padding-left: 20px;
-  margin-bottom: 20px;
+  text-align: center;
   letter-spacing: 1px;
 }
-.full-width-container .fullOverlay .contactContainer .contactInfo div a {
+.full-width-container .contactContainer .contactInfo .title {
+  font-weight: bold;
+}
+.full-width-container .contactContainer .contactInfo span {
+  display: block;
+  padding-bottom: 3px;
+}
+.full-width-container .contactContainer .contactInfo a {
   color: #fff;
 }
 .heightSync {
@@ -6726,6 +6724,9 @@ img.bg {
 }
 #halodome-floorplan img {
   margin: 0 auto;
+}
+.page-template-template-contact .main {
+  min-height: inherit!important;
 }
 @media (min-width: 768px) {
   .half-height {
@@ -6850,19 +6851,24 @@ img.bg {
     float: right;
     padding-left: 50px;
   }
+  .full-width-container .contactContainer {
+    /*.title{
+				float:left;
+				margin-bottom:0;
+			}
+			.contactInfo{
+				float:right;
+				padding-right: 30px;
+			}*/
+  }
+  .full-width-container .contactContainer .contactInfo {
+    font-size: 15px;
+  }
   #halodome-floorplan h2 {
     width: 36%;
     margin: 5% auto 2% auto;
     font-size: 1.9vw;
     text-transform: uppercase;
-  }
-  .contactContainer .title {
-    float: left;
-    margin-bottom: 0;
-  }
-  .contactContainer .contactInfo {
-    float: right;
-    padding-right: 30px;
   }
 }
 @media (min-width: 992px) {
@@ -6892,6 +6898,22 @@ img.bg {
   }
   .full-width-container .overlayContent h2.lowerTitle {
     margin-top: 60px;
+  }
+  .full-width-container .contactContainer {
+    /*.title{
+				float:left;
+				margin-bottom:0;
+			}
+			.contactInfo{
+				float:right;
+				padding-right: 30px;
+			}*/
+  }
+  .full-width-container .contactContainer .contactInfo {
+    font-size: 20px;
+  }
+  .full-width-container .contactContainer .contactInfo span {
+    padding-bottom: 5px;
   }
 }
 @media (min-width: 1280px) {
