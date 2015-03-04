@@ -43,15 +43,8 @@
 			<section class="full-width-container">
 <?   	
           }
-?>
-			<img class="bg project-img" src="<?=$meta[0]?>" />
-		  	<!-- data-bttrlazyloading-animation="fadeIn"
-		  	data-bttrlazyloading-xs-src="<?//=$meta[0]?>" 
-		  	data-bttrlazyloading-sm-src="<?//=$meta[0]?>"
-		    data-bttrlazyloading-md-src="<?//=$meta[0]?>"
-		    data-bttrlazyloading-lg-src="<?//=$meta[0]?>" /> -->
-<?
-		    if($j==0){
+
+          if($j==0){
 		    	if($i%2==0){
 		    		$class="leftContent";
 		    	}
@@ -67,6 +60,12 @@
 <?
 		    }
 ?>
+			<img class="bg project-img" src="<?=$meta[0]?>" />
+		  	<!-- data-bttrlazyloading-animation="fadeIn"
+		  	data-bttrlazyloading-xs-src="<?//=$meta[0]?>" 
+		  	data-bttrlazyloading-sm-src="<?//=$meta[0]?>"
+		    data-bttrlazyloading-md-src="<?//=$meta[0]?>"
+		    data-bttrlazyloading-lg-src="<?//=$meta[0]?>" /> -->
 			</section>
 <?
 		    $j++;
