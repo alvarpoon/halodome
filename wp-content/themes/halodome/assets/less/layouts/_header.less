@@ -34,6 +34,8 @@
 	font-size:15px;
 	li{
 		border-bottom:1px solid #333333;
+		padding-top:5px;
+		padding-bottom:5px;
 		ul li{
 			border-bottom:none;
 		}
@@ -51,6 +53,9 @@
 		padding-left:0;
 		li{
 			margin-bottom:10px;
+			padding:0;
+			list-style:none;
+			padding:0;
 			a{
 				color:#777777;
 				&:hover{
@@ -112,6 +117,7 @@
 	.navbar-default{
 		.navbar-nav{ 
 			font-size:100%;
+			padding:0;
 			li {
 				border-bottom:none;
 				margin: 0 20px 10px;
@@ -121,6 +127,30 @@
 					&:hover, &:focus{
 						color:#fff;
 						border-bottom:none;
+					}
+				}
+			}
+			
+			.sub-menu{
+				position:absolute;
+				list-style:none;
+				padding:0;
+				left:-24px;
+				display:none;
+				top:30px;
+				z-index:999;
+				padding-bottom:4px;
+				/*background:url(../img/bg_alpha.png) no-repeat 0 2px;*/
+				margin-top: -20px;
+				padding-top: 20px;
+				li{
+					margin:0!important;
+					text-align:center;
+					width:112px;
+					padding:6px 0;
+					background:url(../img/bg_alpha.png) repeat;
+					a:hover{
+						text-decoration: underline!important;
 					}
 				}
 			}
@@ -154,29 +184,7 @@
 		}
 	}
 	
-	.sub-menu{
-		position:absolute;
-		list-style:none;
-		padding:0;
-		left:-24px;
-		display:none;
-		top:30px;
-		z-index:999;
-		padding-bottom:4px;
-		/*background:url(../img/bg_alpha.png) no-repeat 0 2px;*/
-		margin-top: -20px;
-		padding-top: 20px;
-		li{
-			margin:0!important;
-			text-align:center;
-			width:112px;
-			padding:6px 0;
-			background:url(../img/bg_alpha.png) repeat;
-			a:hover{
-				text-decoration: underline!important;
-			}
-		}
-	}
+	
 	
 	
 }
@@ -194,6 +202,7 @@
 		.navbar-nav{ 
 			li {
 				margin: 0 30px 10px;
+				padding:0;
 				a{
 					padding:0;
 					color:#fff;

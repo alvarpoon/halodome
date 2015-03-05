@@ -6945,6 +6945,8 @@ img.bg {
 }
 .navbar-nav li {
   border-bottom: 1px solid #333333;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 .navbar-nav li ul li {
   border-bottom: none;
@@ -6963,6 +6965,8 @@ img.bg {
 }
 .navbar-nav .sub-menu li {
   margin-bottom: 10px;
+  list-style: none;
+  padding: 0;
 }
 .navbar-nav .sub-menu li a {
   color: #777777;
@@ -7017,6 +7021,7 @@ img.bg {
   }
   .navbar-default .navbar-nav {
     font-size: 100%;
+    padding: 0;
   }
   .navbar-default .navbar-nav li {
     border-bottom: none;
@@ -7030,6 +7035,29 @@ img.bg {
   .navbar-default .navbar-nav li a:focus {
     color: #fff;
     border-bottom: none;
+  }
+  .navbar-default .navbar-nav .sub-menu {
+    position: absolute;
+    list-style: none;
+    padding: 0;
+    left: -24px;
+    display: none;
+    top: 30px;
+    z-index: 999;
+    padding-bottom: 4px;
+    /*background:url(../img/bg_alpha.png) no-repeat 0 2px;*/
+    margin-top: -20px;
+    padding-top: 20px;
+  }
+  .navbar-default .navbar-nav .sub-menu li {
+    margin: 0!important;
+    text-align: center;
+    width: 112px;
+    padding: 6px 0;
+    background: url(../img/bg_alpha.png) repeat;
+  }
+  .navbar-default .navbar-nav .sub-menu li a:hover {
+    text-decoration: underline!important;
   }
   .navbar-default {
     background: url(../img/bg_alpha.png) repeat;
@@ -7052,29 +7080,6 @@ img.bg {
   .menu-projects:hover .sub-menu {
     display: block;
   }
-  .sub-menu {
-    position: absolute;
-    list-style: none;
-    padding: 0;
-    left: -24px;
-    display: none;
-    top: 30px;
-    z-index: 999;
-    padding-bottom: 4px;
-    /*background:url(../img/bg_alpha.png) no-repeat 0 2px;*/
-    margin-top: -20px;
-    padding-top: 20px;
-  }
-  .sub-menu li {
-    margin: 0!important;
-    text-align: center;
-    width: 112px;
-    padding: 6px 0;
-    background: url(../img/bg_alpha.png) repeat;
-  }
-  .sub-menu li a:hover {
-    text-decoration: underline!important;
-  }
 }
 @media (min-width: 992px) {
   .navbar-default {
@@ -7082,6 +7087,7 @@ img.bg {
   }
   .navbar-default .navbar-nav li {
     margin: 0 30px 10px;
+    padding: 0;
   }
   .navbar-default .navbar-nav li a {
     padding: 0;
