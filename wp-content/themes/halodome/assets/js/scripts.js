@@ -2476,7 +2476,7 @@ function magicLine(){
 	var lineOffset = $(".active").offset();
 	var mainNavOffset = $mainNav.parent().offset();
 	
-	console.log('lineOffset left:'+lineOffset.left+'mainNavOffset left:'+mainNavOffset.left);
+	//console.log('lineOffset left:'+lineOffset.left+'mainNavOffset left:'+mainNavOffset.left);
 	
 	if(checkWindowWidth() > 991){
 		$magicLine
@@ -2498,23 +2498,66 @@ function magicLine(){
 		.data("origLeft", $magicLine.position().left)
 		.data("origWidth", $magicLine.width());*/
 			
-	$("#menu-main > li a").not('ul li ul a').hover(
+	$("#menu-main > li a").hover(
 		function() {
-
-			$el = $(this);
+			if($(this).parent().parent().hasClass('sub-menu')){
+				$el = $(this).parent().parent().parent().find('a:first-child');
+				leftPos = $el.parent().position().left;
+				//console.log(leftPos);
+				newWidth = $el.parent().width();
+				//console.log(newWidth);
+				$magicLine.stop().animate({
+					left: leftPos,
+					width: newWidth
+				});
+			}else{
+				$el = $(this);
+				leftPos = $el.parent().position().left;
+				//console.log(leftPos);
+				newWidth = $el.parent().width();
+				//console.log(newWidth);
+				$magicLine.stop().animate({
+					left: leftPos,
+					width: newWidth
+				});
+			}
+		}, function() {
+			if($(this).parent().parent().hasClass('sub-menu')){
+				$magicLine.stop().animate({
+					left: $magicLine.data("parentLeft"),
+					width: $magicLine.data("parentWidth")
+				});    
+			}else{
+				$magicLine.stop().animate({
+					left: $magicLine.data("origLeft"),
+					width: $magicLine.data("origWidth")
+				});    
+			}
+	});	
+	
+	$(".sub-menu").bind({
+		mouseenter: function() {
+			console.log('enter');
+			$el = $(this).parent().find('a:first-child');
 			leftPos = $el.parent().position().left;
 			//console.log(leftPos);
 			newWidth = $el.parent().width();
 			//console.log(newWidth);
+			$magicLine.data("parentLeft", leftPos)
+		 			  .data("parentWidth", newWidth);
+				
 			$magicLine.stop().animate({
 				left: leftPos,
 				width: newWidth
 			});
-		}, function() {
+		}, 
+		mouseleave: function(e) {
+			e.stopPropagation();
 			$magicLine.stop().animate({
 				left: $magicLine.data("origLeft"),
 				width: $magicLine.data("origWidth")
 			});    
+		}
 	});	
 }
 

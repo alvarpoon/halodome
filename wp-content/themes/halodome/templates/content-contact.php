@@ -26,7 +26,6 @@
             <span>17/F  2 Heung Yip Street</span>
             <span>Wong Chuk Hang  Hong Kong</span>
             <span>E. <a href="mailto:info@halodome.net">info@halodome.net</a></span>
-            <span><a href="http://www.halodome.net">www.halodome.net</a></span>
         </div>
 	  </div>
   </div>
