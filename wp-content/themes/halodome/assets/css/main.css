@@ -7021,11 +7021,11 @@ img.bg {
   }
   .navbar-default .navbar-nav {
     font-size: 100%;
-    padding: 0;
   }
   .navbar-default .navbar-nav li {
     border-bottom: none;
     margin: 0 20px 10px;
+    padding: 0;
   }
   .navbar-default .navbar-nav li a {
     padding: 0;
