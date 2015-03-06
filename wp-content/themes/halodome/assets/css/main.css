@@ -6934,7 +6934,7 @@ img.bg {
   background: none;
 }
 .navbar-absolute-top .navbar-collapse {
-  border-top: 1px solid #333;
+  border-top: none;
   padding: 0;
   background-color: #000;
 }
@@ -6951,12 +6951,18 @@ img.bg {
   padding: 0 20px;
 }
 .navbar-nav li {
-  border-bottom: 1px solid #333333;
+  border-bottom: 1px solid #999;
   padding-top: 5px;
   padding-bottom: 5px;
 }
 .navbar-nav li ul li {
   border-bottom: none;
+}
+.navbar-nav li:nth-last-child(2) {
+  border: none;
+}
+.navbar-nav .current_page_item a:first-child {
+  color: #fff!important;
 }
 .navbar-nav #magic-line {
   display: none;
@@ -6977,6 +6983,7 @@ img.bg {
 }
 .navbar-nav .children li a {
   color: #777777;
+  font-weight: 300;
 }
 .navbar-nav .children li a:hover {
   color: #fff;

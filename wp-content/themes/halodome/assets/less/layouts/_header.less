@@ -15,7 +15,7 @@
     top: 0;
 	background:none;
 	.navbar-collapse{
-		border-top:1px solid #333;
+		border-top:none;
 		padding:0;
 		background-color:#000;
 	}
@@ -35,11 +35,19 @@
 	padding: 0 20px;
 	
 	li{
-		border-bottom:1px solid #333333;
+		border-bottom:1px solid #999;
 		padding-top:5px;
 		padding-bottom:5px;
 		ul li{
 			border-bottom:none;
+		}
+	}
+	li:nth-last-child(2){
+		border:none;
+	}
+	.current_page_item {
+		a:first-child{
+			color:#fff!important;
 		}
 	}
 	#magic-line { 
@@ -60,6 +68,7 @@
 			padding:0;
 			a{
 				color:#777777;
+				font-weight:300;
 				&:hover{
 					color:#fff;
 					text-decoration: none;
