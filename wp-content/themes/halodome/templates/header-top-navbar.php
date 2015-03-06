@@ -15,13 +15,16 @@
   <div class="nav-container">
   	<div class="logo hidden-xs"><a href="<?=get_bloginfo('url')?>"></a></div>
     <nav class="collapse navbar-collapse main-menu" role="navigation">
+      <ul id="menu-main" class="nav navbar-nav">
+        <? wp_list_pages('sort_column=menu_order&depth=2&title_li='); ?>
 		<?php
             //Main menu
-            if (has_nav_menu('primary_navigation')) :
+            /*if (has_nav_menu('primary_navigation')) :
               wp_nav_menu(array('theme_location' => 'primary_navigation', 'menu_class' => 'nav navbar-nav', 'depth' => 0));
-            endif;
+            endif;*/
 
         ?>
+      </ul>
     </nav>
   </div>
 </header>

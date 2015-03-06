@@ -71,20 +71,20 @@ function magicLine(){
 	}
 	var $magicLine = $("#magic-line");
 	
-	var lineOffset = $(".active").offset();
+	var lineOffset = $(".current_page_item").offset();
 	var mainNavOffset = $mainNav.parent().offset();
 	
 	//console.log('lineOffset left:'+lineOffset.left+'mainNavOffset left:'+mainNavOffset.left);
 	
 	if(checkWindowWidth() > 991){
 		$magicLine
-			.width($(".active").width())
+			.width($(".current_page_item").width())
 			.css("left", lineOffset.left-mainNavOffset.left-30)
 			.data("origLeft", $magicLine.position().left)
 			.data("origWidth", $magicLine.width());
 	}else{
 		$magicLine
-			.width($(".active").width())
+			.width($(".current_page_item").width())
 			.css("left", lineOffset.left-mainNavOffset.left-20)
 			.data("origLeft", $magicLine.position().left)
 			.data("origWidth", $magicLine.width());
@@ -98,7 +98,7 @@ function magicLine(){
 			
 	$("#menu-main > li a").hover(
 		function() {
-			if($(this).parent().parent().hasClass('sub-menu')){
+			if($(this).parent().parent().hasClass('children')){
 				$el = $(this).parent().parent().parent().find('a:first-child');
 				leftPos = $el.parent().position().left;
 				//console.log(leftPos);
@@ -120,7 +120,7 @@ function magicLine(){
 				});
 			}
 		}, function() {
-			if($(this).parent().parent().hasClass('sub-menu')){
+			if($(this).parent().parent().hasClass('children')){
 				$magicLine.stop().animate({
 					left: $magicLine.data("parentLeft"),
 					width: $magicLine.data("parentWidth")
@@ -133,7 +133,7 @@ function magicLine(){
 			}
 	});	
 	
-	$(".sub-menu").bind({
+	$(".children").bind({
 		mouseenter: function() {
 			console.log('enter');
 			$el = $(this).parent().find('a:first-child');
@@ -157,6 +157,14 @@ function magicLine(){
 			});    
 		}
 	});	
+
+	$('.children li a').each(function(){
+		old_link = $(this).attr('href');
+		link_arr = old_link.split('/projects/');
+		new_link = '/projects/#'+link_arr[1];
+		new_link = new_link.substring(0, new_link.length - 1);
+		$(this).attr('href',new_link);
+	});
 }
 
 function checkWindowWidth() {

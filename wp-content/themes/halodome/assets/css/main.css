@@ -6779,6 +6779,9 @@ img.bg {
     bottom: 0;
     width: 100%;
   }
+  .full-width-container .image-caption p {
+    font-size: 13px;
+  }
   .full-width-container .rightContent {
     width: 35%;
     position: absolute;
@@ -6789,10 +6792,10 @@ img.bg {
     right: 0!important;
   }
   .full-width-container .rightContent .image-caption {
+    padding: 40px 5% 0 10%;
     background: url(../img/bg_alpha_r.png) no-repeat top left;
     height: 100%;
     right: 0;
-    padding: 40px 11% 0 11%;
   }
   .full-width-container .leftContent {
     width: 35%;
@@ -6804,10 +6807,10 @@ img.bg {
     left: 0;
   }
   .full-width-container .leftContent .image-caption {
+    padding: 40px 10% 0 5%;
     background: url(../img/bg_alpha_l.png) no-repeat top right;
     height: 100%;
     left: 0;
-    padding: 40px 11% 0 11%;
   }
   .full-width-container .numberDataContainer {
     background: url(../img/bg_alpha.png) repeat;
@@ -6889,6 +6892,9 @@ img.bg {
   .full-width-container .image-caption {
     padding: 10px 22%;
   }
+  .full-width-container .image-caption p {
+    font-size: 15px;
+  }
   .full-width-container .overlayContent h2.lowerTitle {
     margin-top: 60px;
   }
@@ -6942,6 +6948,7 @@ img.bg {
   text-align: center;
   text-transform: uppercase;
   font-size: 15px;
+  padding: 0 20px;
 }
 .navbar-nav li {
   border-bottom: 1px solid #333333;
@@ -6960,18 +6967,18 @@ img.bg {
   height: 1px;
   background: #fff;
 }
-.navbar-nav .sub-menu {
+.navbar-nav .children {
   padding-left: 0;
 }
-.navbar-nav .sub-menu li {
+.navbar-nav .children li {
   margin-bottom: 10px;
   list-style: none;
   padding: 0;
 }
-.navbar-nav .sub-menu li a {
+.navbar-nav .children li a {
   color: #777777;
 }
-.navbar-nav .sub-menu li a:hover {
+.navbar-nav .children li a:hover {
   color: #fff;
   text-decoration: none;
 }
@@ -7036,7 +7043,7 @@ img.bg {
     color: #fff;
     border-bottom: none;
   }
-  .navbar-default .navbar-nav .sub-menu {
+  .navbar-default .navbar-nav .children {
     position: absolute;
     list-style: none;
     padding: 0;
@@ -7049,14 +7056,14 @@ img.bg {
     margin-top: -20px;
     padding-top: 20px;
   }
-  .navbar-default .navbar-nav .sub-menu li {
+  .navbar-default .navbar-nav .children li {
     margin: 0!important;
     text-align: center;
     width: 112px;
     padding: 6px 0;
     background: url(../img/bg_alpha.png) repeat;
   }
-  .navbar-default .navbar-nav .sub-menu li a:hover {
+  .navbar-default .navbar-nav .children li a:hover {
     text-decoration: underline!important;
   }
   .navbar-default {
@@ -7077,7 +7084,7 @@ img.bg {
   .navbar-default .navbar-nav #magic-line {
     display: block;
   }
-  .menu-projects:hover .sub-menu {
+  .page-item-8:hover .children {
     display: block;
   }
 }
