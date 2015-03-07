@@ -20,7 +20,7 @@
 		<h1>HALODOME</h1>
 		<h3>Spectacular Space</h3>
 	  </div>
-      <div class="image-caption contactContainer">
+      <div class="image-caption image-caption-darker-2 contactContainer">
 		<div class="contactInfo">
         	<span class="title">Halodome Ltd</span>
             <span>17/F  2 Heung Yip Street</span>

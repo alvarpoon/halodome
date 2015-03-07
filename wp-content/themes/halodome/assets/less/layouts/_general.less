@@ -257,6 +257,14 @@ img.bg {
 			bottom:0;
 			width:100%;
 
+			&.image-caption-darker{
+				background:url(../img/bg_alpha_darker.png) repeat;
+			}
+
+			&.image-caption-darker-2{
+				background:url(../img/bg_alpha_darker_2.png) repeat;
+			}
+
 			p{
 				font-size: 13px;
 			}
@@ -275,6 +283,10 @@ img.bg {
 				height:100%;
 				right:0;
 				//padding: 40px 11% 0 11%;
+
+				&.image-caption-darker{
+					background:url(../img/bg_alpha_r_darker.png) no-repeat top left;
+				}
 			}
 		}
 		.leftContent{
@@ -291,6 +303,9 @@ img.bg {
 				height:100%;
 				left:0;
 				//padding: 40px 11% 0 11%;
+				&.image-caption-darker{
+					background:url(../img/bg_alpha_l_darker.png) no-repeat top right;
+				}
 			}
 		}
 		.numberDataContainer{
@@ -405,13 +420,17 @@ img.bg {
 		
 		.contactContainer{
 			.contactInfo{
-				font-size:16px;
+				font-size:15px;
 				line-height:160%;
 				span{
 					padding-bottom:5px;
 				}
 			}
 		}
+	}
+	.full-width-container .fullOverlay .aboutParagraph p,
+	.full-width-container .fullOverlay .aboutList{
+		font-size: 15px;
 	}
 }
 

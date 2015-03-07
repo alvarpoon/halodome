@@ -17,9 +17,6 @@
 		<h1>HALODOME</h1>
 		<h3>Spectacular Space</h3>
 	  </div>
-	  <div class="image-caption">
-		<p>Built to German Passivehaus specification, the highest standard in the world for energy consumption, the concept uses eighty fully prefabricated and sustainably sourced timber panels bolted together to form a single dome space 13 meters x 6.5 meters high.</p>
-	  </div>
 	</div>
 </section>
 <section class="full-width-container heightSync">
