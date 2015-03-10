@@ -32,6 +32,14 @@ switch ($_SERVER['SERVER_NAME']) {
     define( 'DB_USER',     'nowwhat' ); // replace with live server settings
     define( 'DB_PASSWORD', '20273214' );
     define( 'DB_HOST',     'localhost' );
+
+  case "www.halodome.net":
+    define( 'DB_NAME',     'halodome' );
+    define( 'WP_SITEURL',  'http://www.halodome.net' );
+    define( 'WP_HOME', 'http://www.halodome.net' );
+    define( 'DB_USER',     'halodome_usr' ); // replace with live server settings
+    define( 'DB_PASSWORD', 'MU9BWmNPiiGE0oppz7hY' );
+    define( 'DB_HOST',     'localhost' );
 }
 
 /** Database Charset to use in creating database tables. */
@@ -86,10 +94,10 @@ define('WPLANG', '');
  * in their development environments.
  */
  
-error_reporting(E_ALL); ini_set('display_errors', 1);
-define('WP_DEBUG', true);
+//error_reporting(E_ALL); ini_set('display_errors', 1);
+//define('WP_DEBUG', true);
 
-define('WP_ENV', 'development');
+//define('WP_ENV', 'development');
 
 /* That's all, stop editing! Happy blogging. */
 
