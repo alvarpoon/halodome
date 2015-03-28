@@ -6840,10 +6840,10 @@ img.bg {
   }
   .full-width-container .numberDataContainer .numberData span {
     display: block;
-    font-size: 8vw;
+    font-size: 80px;
   }
   .full-width-container .numberDataContainer .numberData sup {
-    font-size: 5vw;
+    font-size: 50px;
   }
   .full-width-container h2 {
     border: 1px solid #fff;
@@ -6888,7 +6888,7 @@ img.bg {
     margin: 10px 0 0 0;
   }
   .full-width-container .numberDataContainer {
-    padding: 8% 6%;
+    padding: 4% 6%;
     font-size: 1.2vw;
   }
   .full-width-container .numberDataContainer .numberData {
@@ -6896,10 +6896,10 @@ img.bg {
   }
   .full-width-container .numberDataContainer .numberData span {
     display: block;
-    font-size: 8vw;
+    font-size: 90px;
   }
   .full-width-container .numberDataContainer .numberData sup {
-    font-size: 5vw;
+    font-size: 60px;
   }
   .full-width-container .image-caption {
     padding: 10px 22%;
@@ -6925,7 +6925,7 @@ img.bg {
 @media (min-width: 1280px) {
   .full-width-container .numberDataContainer {
     width: 100%;
-    padding: 4% 3%;
+    padding: 0 3%;
     font-size: 1.0vw;
   }
   .full-width-container .numberDataContainer .numberData {
@@ -6933,10 +6933,10 @@ img.bg {
   }
   .full-width-container .numberDataContainer .numberData span {
     display: block;
-    font-size: 6.5vw;
+    font-size: 110px;
   }
   .full-width-container .numberDataContainer .numberData sup {
-    font-size: 5vw;
+    font-size: 80px;
   }
 }
 .navbar-absolute-top {
