@@ -2427,7 +2427,12 @@ var Roots = {
       // JavaScript to be fired on all pages
       $(document).ready(function(){
 			//$('.project-img').bttrlazyloading();
-			$().localScroll({hash:true});
+			if(window.innerwidth<=768){
+				$().localScroll({hash:true,offset: -63});
+			}
+			else{
+				$().localScroll({hash:true});
+			}
 
 			$('.children li a').each(function(){
 				old_link = $(this).attr('href');

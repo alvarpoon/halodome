@@ -25,7 +25,13 @@ var Roots = {
       // JavaScript to be fired on all pages
       $(document).ready(function(){
 			//$('.project-img').bttrlazyloading();
-			$().localScroll({hash:true});
+			//console.log(window.innerWidth);
+			if(window.innerWidth<=768){
+				$.localScroll({hash:true,queue:true,duration:1000,offset: { top: -63 }});
+			}
+			else{
+				$.localScroll({hash:true,queue:true,duration:1000});
+			}
 
 			$('.children li a').each(function(){
 				old_link = $(this).attr('href');
