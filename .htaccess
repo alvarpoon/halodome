@@ -3,6 +3,8 @@
 <IfModule mod_rewrite.c>
 RewriteEngine On
 RewriteBase /
+RewriteCond %{HTTP_HOST} ^halodome\.net$ [NC]
+RewriteRule ^(.*)$ http://www.halodome.net/$1 [R=301,L]
 RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d

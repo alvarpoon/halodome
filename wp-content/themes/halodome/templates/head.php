@@ -14,4 +14,6 @@
   <!--[if lt IE 9]>
     <link rel="stylesheet" href="<?php bloginfo('template_url')?>/assets/css/ie8-style.css" type="text/css" />
   <![endif]-->
+<link rel="shortcut icon" href="<?php bloginfo('template_url')?>/favicon.ico">
+<link rel="icon" href="<?php bloginfo('template_url')?>/favicon.ico" type="image/icon">
 </head>

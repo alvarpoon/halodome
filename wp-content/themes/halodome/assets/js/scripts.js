@@ -2428,6 +2428,20 @@ var Roots = {
       $(document).ready(function(){
 			//$('.project-img').bttrlazyloading();
 			$().localScroll({hash:true});
+
+			$('.children li a').each(function(){
+				old_link = $(this).attr('href');
+				link_arr = old_link.split('/projects/');
+				new_link = '/projects/#'+link_arr[1];
+				new_link = new_link.substring(0, new_link.length - 1);
+				$(this).attr('href',new_link);
+			});
+		});
+
+      $(document).on('click','.navbar-collapse.in',function(e) {
+		    if( $(e.target).is('a') && $(e.target).attr('class') !== 'dropdown-toggle' ) {
+		        $(this).collapse('hide');
+		    }
 		});
     }
   },
@@ -2559,14 +2573,6 @@ function magicLine(){
 			});    
 		}
 	});	
-
-	$('.children li a').each(function(){
-		old_link = $(this).attr('href');
-		link_arr = old_link.split('/projects/');
-		new_link = '/projects/#'+link_arr[1];
-		new_link = new_link.substring(0, new_link.length - 1);
-		$(this).attr('href',new_link);
-	});
 }
 
 function checkWindowWidth() {
